@@ -1,5 +1,6 @@
-mixin textarea(placeholder,vvod)
-	if vvod
-		textarea.textarea.vvod(placeholder=placeholder)
-	else
-		textarea.textarea(placeholder=placeholder)
+mixin textarea(labelText,placeholder,indNew)
+	label.label #{labelText}
+		if indNew
+			textarea.textarea.indNew(placeholder=placeholder)
+		else
+			textarea.textarea(placeholder=placeholder)

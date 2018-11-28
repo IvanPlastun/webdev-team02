@@ -1,5 +1,6 @@
-mixin input(placeholder,vvod)
-	if vvod
-		input.input.vvod(placeholder=placeholder)
-	else
-		input.input(placeholder=placeholder)
+mixin input(labelText,placeholder,indNew)
+	label.label #{labelText}
+		if indNew
+			input.input.indNew(type="text" placeholder=placeholder)
+		else
+			input.input(type="text" placeholder=placeholder)

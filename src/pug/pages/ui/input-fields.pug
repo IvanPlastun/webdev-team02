@@ -9,30 +9,33 @@ block content
 		.container.container--left.user-content.pt-35
 			h1 Поля ввода
 			.section-ui
-				+input('Введите имя',1)
+				+input('Поле для ввода','Введите имя',1)
 			pre.
-				+input('Введите имя',1)
+				+input('Поле для ввода','Введите имя',1)
 			
 			.title mixins/_input.pug
 			pre.
-				mixin input(placeholder,vvod)
-					if vvod
-						input.input.vvod(placeholder=placeholder)
-					else
-						input.input(placeholder=placeholder)
+				mixin input(labelText,placeholder,indNew)
+					label.label labelText
+						if indNew
+							input.input.indNew(type="text" placeholder=placeholder)
+						else
+							input.input(type="text" placeholder=placeholder)
 							
 
 			.section-ui
-				+textarea('Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
+				+textarea('Сообщение - Textarea','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
 			pre.
-				+textarea('Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
+				+textarea('Сообщение - Textarea','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
 			
 			.title mixins/_textarea.pug
 			pre.
-				mixin textarea(placeholder,vvod)
-					if vvod
-						textarea.textarea.vvod(placeholder=placeholder)
-					else
-						textarea.textarea(placeholder=placeholder)
+				mixin textarea(labelText,placeholder,indNew)
+					label.label labelText
+						if indNew
+							textarea.textarea.indNew(placeholder=placeholder)
+						else
+							textarea.textarea(placeholder=placeholder)
 
-			p Поля для ввода input и textarea используются для форм ввода новой информации и форм редактирования данных. Для форм ввода  необходимо передать параметр vvod, равный 1 (единица). Для редактирования полей - передать параметр vvod, равный 0 (ноль).
+			p Поля для ввода input и textarea используются для форм ввода новой информации и форм редактирования данных. Для форм ввода  необходимо передать параметр indNew, равный 1 (единица). Для редактирования полей - передать параметр indNew, равный 0 (ноль).
+			p Параметры: labelText - текст в теге Label, placeholder - текст в теге input, indNew - служебный флаг (1 для форм ввода, 0 для форм редактирования).
