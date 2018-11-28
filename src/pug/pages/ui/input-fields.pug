@@ -1,0 +1,38 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Поля ввода - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Поля ввода
+			.section-ui
+				+input('Введите имя',1)
+			pre.
+				+input('Введите имя',1)
+			
+			.title mixins/_input.pug
+			pre.
+				mixin input(placeholder,vvod)
+					if vvod
+						input.input.vvod(placeholder=placeholder)
+					else
+						input.input(placeholder=placeholder)
+							
+
+			.section-ui
+				+textarea('Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
+			pre.
+				+textarea('Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
+			
+			.title mixins/_textarea.pug
+			pre.
+				mixin textarea(placeholder,vvod)
+					if vvod
+						textarea.textarea.vvod(placeholder=placeholder)
+					else
+						textarea.textarea(placeholder=placeholder)
+
+			p Поля для ввода input и textarea используются для форм ввода новой информации и форм редактирования данных. Для форм ввода  необходимо передать параметр vvod, равный 1 (единица). Для редактирования полей - передать параметр vvod, равный 0 (ноль).
