@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - var title = 'Чекбокс - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard dark-bg';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Чекбокс
+
+            .section-ui
+                label.form__label-checkbox
+                    input.form__input-checkbox(type='checkbox')
+                    span.form__checkbox 
+                    | Запомнить меня                    
+
+            pre.
+                label.form__label-checkbox
+                    input.form__input-checkbox(type='checkbox')
+                    span.form__checkbox
+                    | Запомнить меня
