@@ -1,0 +1,40 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Нотификации - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Нотификации
+			
+			.section-ui
+				.mb-15
+					h2 Простая нотификация
+					+notification('notification--simple', 'Информация обновлена')
+				.mb-15
+					h2 Нотификация успех
+					+notification('notification--success', 'Запись создана успешно!')
+				.mb-15
+					h2 Нотификация ошибка
+					+notification('notification--error', 'Комментарий не может быть пустым')
+				.mb-15
+					+notification-prompt('Данный email уже занят', '#')
+			pre.
+				+notification('notification--simple', 'Информация обновлена')
+
+				+notification('notification--success', 'Запись создана успешно!')
+
+				+notification('notification--error', 'Комментарий не может быть пустым')
+
+				+notification-prompt('Данный email уже занят', '#')
+				
+			.title mixins/_notifications.pug
+			pre.
+				mixin notification(modifier, message)
+					div(class="notification " + modifier) #{'#{message}'}
+
+				mixin notification-prompt(message, link)
+					div(class="notification notification--error notification--spec") #{message}
+					div(class="notification notification--prompt") Используйте другой email чтобы создать новый аккаунт. Или воспользуйтесь #[a(class="notification__link" href= link) восстановлением пароля], чтобы войти на сайт.
