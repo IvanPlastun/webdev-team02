@@ -10,4 +10,16 @@ block content
             h1 Бейдж
 
             .section-ui
+                .title-2 Бейдж по умолчанию
                 +badge('Пользователь')
+            .section-ui
+                .title-2 Бейдж с настройкой
+                +badge('Пользователь', 'badge--color')
+            pre.
+                +badge('Пользователь')
+                +badge('Пользователь', 'badge--color')
+            .title-2 mixins/_badge.pug
+            pre.
+                mixin badge(text, setting)
+                    - set = setting || ''
+                    span(class=set).badge #{'#{text}'}
