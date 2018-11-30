@@ -5,44 +5,187 @@
 	outline: none;
 	cursor: pointer;
 	text-decoration: none;
-	
-	// height: 44px;
 	border-radius: 22px;
 	background-color: #bbc7d3;
-	
-
-	padding-top: 0.8em;  // 14px
-	padding-bottom: 0.951em; // 13px
-	padding-left: 1.25em; // 20px
-	padding-right: 1.25em; // 20px
+	padding: 13px 30px;
 
 	color: #ffffff;
 	font-family: @baseFont;
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1;
-
-	&:hover,
-	&:focus {
-		background-color: #DDE8EE;
-	}
-
-	&:active {
-		background-color: #b4dff6;
-	}
-
-	
+	margin-bottom: 30px;
 }
 
-.button--primary {
-	background-color: @blue;
-	
+.button--normal{
+	background-color: @white;
+	color:@blue;
+	border: 2px solid @gray;
 	&:hover,
 	&:focus {
-		background-color: lighten(@blue, 7);
+		background-color: @gray;
 	}
 
 	&:active {
-		background-color: darken(@blue, 7);
+		background-color: @grayActive;
 	}
+}
+
+.button--detailed{
+	background-color: @white;
+	color:@blue;
+	border: 2px solid @gray;
+	&:hover,
+	&:focus {
+		background-color: @gray;
+	}
+
+	&:active {
+		background-color: @grayActive;
+	}
+}
+
+
+.button--edit{
+	background-color: @yellow;
+	color:@white;
+	border: 2px solid transparent;
+	&:hover,
+	&:focus {
+		background-color: @yellowHover;
+	}
+	&:active {
+		background-color: @yelowActive;
+	}
+}
+.button--remove{
+	background-color: @red;
+	color:@white;
+	border: 2px solid transparent;
+	&:hover,
+	&:focus {
+		background-color: @redHover;
+	}
+	&:active {
+		background-color: @redActive;
+	}
+}
+
+.button--save{
+	background-color: @blue;
+	color:@white;
+	border: 2px solid transparent;
+	&:hover,
+	&:focus {
+		background-color: @blueHover;
+	}
+	&:active {
+		background-color: @blueActive;
+	}
+}
+.button--enter{
+	background-color: @white;
+	color:@blue;
+	border: 2px solid transparent;
+	box-shadow: 0 6px 16px rgba(23, 50, 66, 0.75);
+	&:hover,
+	&:focus {
+		background-color: @bluesHover;
+		color:@white;
+	}
+	&:active {
+		background-color: @bluesActive;
+	}
+}
+
+//Button Hover
+.section-ui__hover{
+
+	.button--normal{
+	background-color: @gray;
+	color:@blue;
+	border: 2px solid @gray;
+	}
+	.button--detailed{
+		background-color: @gray;
+		color:@blue;
+		border: 2px solid @gray;
+	
+	}
+
+	.button--edit{
+		background-color: @yellowHover;
+		color:@white;
+		border: 2px solid transparent;
+
+	}
+	.button--remove{
+		background-color:@redHover;
+		color:@white;
+		border: 2px solid transparent;
+	}
+
+	.button--save{
+		background-color: @blueHover;
+		color:@white;
+		border: 2px solid transparent;
+
+	}
+
+	.button--enter{
+		background-color: @bluesHover;
+		color:@white;
+		border: 2px solid transparent;
+		box-shadow: 0 6px 16px rgba(23, 50, 66, 0.75);
+	}
+
+}
+
+//Button Active
+.section-ui__active{
+	.button--normal{
+	background-color: @grayActive;
+	color:@blue;
+	border: 2px solid transparent;
+	}
+	.button--detailed{
+		background-color: @grayActive;
+		color:@blue;
+		border: 2px solid transparent;
+	
+	}
+	.button--edit{
+		background-color: @yelowActive;
+		color:@white;
+		border: 2px solid transparent;
+
+	}
+	.button--remove{
+		background-color:@redActive;
+		color:@white;
+		border: 2px solid transparent;
+	}
+
+	.button--save{
+		background-color: @blueActive;
+		color:@white;
+		border: 2px solid transparent;
+
+	}
+
+	.button--enter{
+		background-color: @bluesActive;
+		color:@white;
+		border: 2px solid transparent;
+		box-shadow: 0 6px 16px rgba(23, 50, 66, 0.75);
+	}
+
+}
+
+
+
+
+.fa-arrow-right{
+	margin-left: 5px;
+	font-weight: 400;
 }
