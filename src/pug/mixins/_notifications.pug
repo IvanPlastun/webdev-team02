@@ -1,8 +1,20 @@
-mixin notification(modifier, message)
-	div(class="notification notification--" + modifier)
-		div(class="notification__message") #{message}
-		if block
-			.notification__prompt
-				block
-		else
-			
+mixin notification(title, type)
+	if type == 'success'
+		.notification.notification--success
+			.notification__title #{title}
+			if block
+				.notification__description
+					block
+			else
+					
+	else if type == 'error'
+		.notification.notification--error
+			.notification__title #{title}
+			if block
+				.notification__description
+					block
+			else
+				
+	else
+		.notification
+			.notification__title #{title}

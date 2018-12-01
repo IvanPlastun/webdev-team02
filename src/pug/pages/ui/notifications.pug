@@ -10,17 +10,22 @@ block content
 			h1 Нотификации
 			
 			.section-ui
+
 				h2.mt-30.mb-20 Простая нотификация
-				+notification('', 'Информация обновлена')
+
+				+notification('Информация обновлена')
 				
 				h2.mt-30.mb-20 Нотификация успех
-				+notification('success', 'Запись создана успешно!')
+
+				+notification('Запись создана успешно', 'success')
 
 				h2.mt-30.mb-20 Нотификация ошибка
-				+notification('error', 'Комментарий не может быть пустым')
+
+				+notification('Комментаприй не может быть пустым', 'error')
+
 				.mb-20
 
-				+notification('error', 'Данный email уже занят')
+				+notification('Данный email уже занят', 'error')
 					p.
 						Используйте другой email чтобы создать новый аккаунт.
 					p.
@@ -28,11 +33,11 @@ block content
 			pre.
 				+notification('', 'Информация обновлена')
 
-				+notification('success', 'Запись создана успешно!')
+				+notification('Запись создана успешно', 'success')
 
-				+notification('error', 'Комментарий не может быть пустым')
+				+notification('Комментаприй не может быть пустым', 'error')
 
-				+notification('error', 'Данный email уже занят')
+				+notification('Данный email уже занят', 'error')
 					p.
 						Используйте другой email чтобы создать новый аккаунт.
 					p.
@@ -40,11 +45,24 @@ block content
 				
 			.title mixins/_notifications.pug
 			pre.
-				mixin notification(modifier, message)
-					div(class="notification notification--" + modifier)
-						div(class="notification__message") #{message}
-						if block
-							.notification__prompt
-								block
-						else
+				mixin notification(title, type)
+					if type == 'success'
+						.notification.notification--success
+							.notification__title #{'#{title}'}
+							if block
+								.notification__description
+									block
+							else
+									
+					else if type == 'error'
+						.notification.notification--error
+							.notification__title #{'#{title}'}
+							if block
+								.notification__description
+									block
+							else
+								
+					else
+						.notification
+							.notification__title #{'#{title}'}
 							
