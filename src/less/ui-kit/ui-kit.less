@@ -21,7 +21,6 @@
 .section-ui--wrapper{
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
 	h2{
 		text-transform: uppercase;
 		font-weight: 600;
@@ -39,7 +38,11 @@
 }
 
 .ui-buttom__item--small{
-	display: block;
+	display: inline-block;
+	margin-right: 30px;
+	&:last-child{
+		margin-right: 0;
+	}
 }
 
 

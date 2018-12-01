@@ -1,3 +1,5 @@
+//Button Normal
+
 .button {
 	.transition;
 	display: inline-block;
@@ -6,18 +8,29 @@
 	cursor: pointer;
 	text-decoration: none;
 	border-radius: 22px;
-	background-color: #bbc7d3;
 	padding: 13px 30px;
-
-	color: #ffffff;
 	font-family: @baseFont;
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1;
 	margin-bottom: 30px;
+	&-ahead{
+	background-color: @white;
+	color:@blue;
+	border: 2px solid @gray;
+	&:hover,
+	&:focus {
+		background-color: @gray;
+	}
+
+	&:active {
+		background-color: @grayActive;
+	}
+	}
 }
 
-.button--normal{
+
+.button-detailed{
 	background-color: @white;
 	color:@blue;
 	border: 2px solid @gray;
@@ -31,22 +44,8 @@
 	}
 }
 
-.button--detailed{
-	background-color: @white;
-	color:@blue;
-	border: 2px solid @gray;
-	&:hover,
-	&:focus {
-		background-color: @gray;
-	}
 
-	&:active {
-		background-color: @grayActive;
-	}
-}
-
-
-.button--edit{
+.button-edit{
 	background-color: @yellow;
 	color:@white;
 	border: 2px solid transparent;
@@ -58,7 +57,7 @@
 		background-color: @yelowActive;
 	}
 }
-.button--remove{
+.button-remove{
 	background-color: @red;
 	color:@white;
 	border: 2px solid transparent;
@@ -71,7 +70,7 @@
 	}
 }
 
-.button--save{
+.button-save{
 	background-color: @blue;
 	color:@white;
 	border: 2px solid transparent;
@@ -83,7 +82,7 @@
 		background-color: @blueActive;
 	}
 }
-.button--enter{
+.button-enter{
 	background-color: @white;
 	color:@blue;
 	border: 2px solid transparent;
@@ -99,40 +98,41 @@
 }
 
 //Button Hover
+
 .section-ui__hover{
 
-	.button--normal{
+	.button-ahead{
 	background-color: @gray;
 	color:@blue;
 	border: 2px solid @gray;
 	}
-	.button--detailed{
+	.button-detailed{
 		background-color: @gray;
 		color:@blue;
 		border: 2px solid @gray;
 	
 	}
 
-	.button--edit{
+	.button-edit{
 		background-color: @yellowHover;
 		color:@white;
 		border: 2px solid transparent;
 
 	}
-	.button--remove{
+	.button-remove{
 		background-color:@redHover;
 		color:@white;
 		border: 2px solid transparent;
 	}
 
-	.button--save{
+	.button-save{
 		background-color: @blueHover;
 		color:@white;
 		border: 2px solid transparent;
 
 	}
 
-	.button--enter{
+	.button-enter{
 		background-color: @bluesHover;
 		color:@white;
 		border: 2px solid transparent;
@@ -142,38 +142,39 @@
 }
 
 //Button Active
+
 .section-ui__active{
-	.button--normal{
+	.button-ahead{
 	background-color: @grayActive;
 	color:@blue;
 	border: 2px solid transparent;
 	}
-	.button--detailed{
+	.button-detailed{
 		background-color: @grayActive;
 		color:@blue;
 		border: 2px solid transparent;
 	
 	}
-	.button--edit{
+	.button-edit{
 		background-color: @yelowActive;
 		color:@white;
 		border: 2px solid transparent;
 
 	}
-	.button--remove{
+	.button-remove{
 		background-color:@redActive;
 		color:@white;
 		border: 2px solid transparent;
 	}
 
-	.button--save{
+	.button-save{
 		background-color: @blueActive;
 		color:@white;
 		border: 2px solid transparent;
 
 	}
 
-	.button--enter{
+	.button-enter{
 		background-color: @bluesActive;
 		color:@white;
 		border: 2px solid transparent;
@@ -185,6 +186,17 @@
 
 
 
+//Button Input
+
+
+
+
+
+
+
+
+
+// Icon in Button
 .fa-arrow-right{
 	margin-left: 5px;
 	font-weight: 400;
