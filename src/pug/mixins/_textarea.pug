@@ -1,6 +1,4 @@
 mixin textarea(name,placeholder,areaText,labelText)
-	label.label-class #{labelText}
-		if placeholder
-			textarea.textarea.placeholder(name=name placeholder=placeholder) #{areaText}
-		else
-			textarea.textarea(name=name) #{areaText}
+	label.label-class(for="textarea-robe") #{labelText}
+	textarea.textarea#textarea-robe(name=name placeholder=placeholder) #{areaText}
+

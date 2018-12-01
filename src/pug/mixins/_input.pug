@@ -1,6 +1,3 @@
 mixin input(name,type,placeholder,labelText)
-	label.label-class #{labelText}
-		if placeholder
-			input.input.placeholder(type=type name=name placeholder=placeholder)
-		else
-			input.input(type="text" name=name)
+	label.label-class(for="input-robe") #{labelText}
+	input.input#input-robe(name=name type=type placeholder=placeholder)

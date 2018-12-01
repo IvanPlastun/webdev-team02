@@ -16,11 +16,8 @@ block content
 			.title mixins/_input.pug
 			pre.
 				mixin input(name,type,placeholder,labelText)
-					label.label-class #{'#{labelText}'}
-						if placeholder
-							input.input.placeholder(type=type name=name placeholder=placeholder)
-						else
-							input.input(type="text" name=name)
+					label.label-class(for="input-robe") #{'#{labelText}'}
+					input.input.form-control#input-robe(name=name type=type placeholder=placeholder)
 			.section-ui
 				+textarea('name','','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.','Сообщение - Textarea')
 					
@@ -30,10 +27,7 @@ block content
 			.title mixins/_textarea.pug
 			pre.
 				mixin textarea(name,placeholder,areaText,labelText)
-					label.label-class #{'#{labelText}'}
-						if placeholder
-							textarea.textarea.placeholder(name=name placeholder=placeholder) #{'#{areaText}'}
-						else
-							textarea.textarea(name=name) #{'#{areaText}'}
+					label.label-class(for="textarea-robe") #{'#{labelText}'}
+					textarea.textarea#textarea-robe(name=name placeholder=placeholder) #{'#{areaText}'}
 
 			p Параметры: name - содержание атрибута name, type - содержание атрибута type, placeholder - содержание атрибута placeholder, labelText - текст в теге label, areaText - текст в теге textarea.
