@@ -1,11 +1,15 @@
 .notification {
-	.rounded(4px);
 	color: @white;
-	background-image: linear-gradient( 0deg, rgb(61,122,160) 0%, rgb(138,187,218) 100%);
 }
 
 .notification__title {
 	padding: 14px 16px;
+	background-image: linear-gradient( 0deg, rgb(61,122,160) 0%, rgb(138,187,218) 100%);
+	.rounded(4px);
+}
+
+.notification--with-description {
+	.border-radius(4px, 0px, 0px, 4px);
 }
 
 .notification__description {

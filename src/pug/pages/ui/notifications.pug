@@ -11,27 +11,28 @@ block content
 			
 			.section-ui
 
-				h2.mt-30.mb-20 Простая нотификация
+				.title-2 Простая нотификация
 
 				+notification('Информация обновлена')
 				
-				h2.mt-30.mb-20 Нотификация успех
+				.title-2 Нотификация успех
 
 				+notification('Запись создана успешно', 'success')
 
-				h2.mt-30.mb-20 Нотификация ошибка
+				.title-2 Нотификация ошибка
 
-				+notification('Комментаприй не может быть пустым', 'error')
+				+notification('Комментарий не может быть пустым', 'error')
 
-				.mb-20
+				.title-2 Нотификация c описанием
 
 				+notification('Данный email уже занят', 'error')
 					p.
 						Используйте другой email чтобы создать новый аккаунт.
 					p.
 						Или воспользуйтесь #[a(href="#") восстановлением пароля], чтобы войти на сайт.
+			
 			pre.
-				+notification('', 'Информация обновлена')
+				+notification('Информация обновлена')
 
 				+notification('Запись создана успешно', 'success')
 
@@ -44,25 +45,33 @@ block content
 						Или воспользуйтесь #[a(href="#") восстановлением пароля], чтобы войти на сайт.
 				
 			.title mixins/_notifications.pug
+			
 			pre.
 				mixin notification(title, type)
 					if type == 'success'
-						.notification.notification--success
-							.notification__title #{'#{title}'}
-							if block
+						if block
+							.notification
+								.notification__title.notification--success.notification--with-description #{title}
 								.notification__description
 									block
-							else
-									
+						else
+							.notification
+								.notification__title.notification--success #{title}
 					else if type == 'error'
-						.notification.notification--error
-							.notification__title #{'#{title}'}
-							if block
+						if block
+							.notification
+								.notification__title.notification--error.notification--with-description #{title}
 								.notification__description
 									block
-							else
-								
+						else
+							.notification
+								.notification__title.notification--error #{title}
 					else
-						.notification
-							.notification__title #{'#{title}'}
-							
+						if block
+							.notification
+								.notification__title.notification--with-description #{title}
+								.notification__description
+									block
+						else
+							.notification
+								.notification__title #{title}
