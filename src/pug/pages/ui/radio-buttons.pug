@@ -10,24 +10,16 @@ block content
 			h1 Радиокнопки
 			
 			.section-ui
-				+radio-button('Выбор 1')
-				+radio-button('Выбор 2')
+				+radio-button('Выбор 1','option1')
+				+radio-button('Выбор 2','option1')
 			pre.
-				+radio-button('Выбор 1')
-				+radio-button('Выбор 2')
+				+radio-button('Выбор 1','option1')
+				+radio-button('Выбор 2','option1')
 
 			.title mixins/_radio-buttons.pug
 			pre.
-				mixin radio-button(text)
+				mixin radio-button(text,radioGroup)
 					label.form__label-radio
-						input(class="form__input-radio" type="radio" name="radio-group")
+						input(class="form__input-radio" type="radio" name=radioGroup)
 						span.form__radio
 						| #{'#{text}'}
-
-			
-				
-
-
-			
-			
-			

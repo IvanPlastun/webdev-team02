@@ -1,6 +1,7 @@
 label {
 	display: block;
 	margin-bottom: 20px;
+	cursor: pointer;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -16,13 +17,14 @@ label {
 	border-radius: 50%;
 	background: @white;
 	margin-right: 10px;
-	vertical-align: middle;
+	vertical-align: text-bottom;
 	.transition
 }
 
 .form__input-radio:checked + .form__radio {
-	background: darken(@blue , 10%);
+	background-color: darken(@blue , 10%);
 	border: 0.375rem solid @white;//6px
+	box-shadow: 0px 0px 0px 1px #bcc7ce;
 }
 
 .form__input-radio {

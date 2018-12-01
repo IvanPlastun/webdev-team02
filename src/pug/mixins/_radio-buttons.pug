@@ -1,5 +1,5 @@
-mixin radio-button(text)
+mixin radio-button(text,radioGroup)
 	label.form__label-radio
-		input(class="form__input-radio" type="radio" name="radio-group")
+		input(class="form__input-radio" type="radio" name=radioGroup)
 		span.form__radio
 		| #{text}
