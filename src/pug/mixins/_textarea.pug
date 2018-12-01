@@ -1,6 +1,6 @@
-mixin textarea(labelText,placeholder,indNew)
-	label.label #{labelText}
-		if indNew
-			textarea.textarea.indNew(placeholder=placeholder)
+mixin textarea(name,placeholder,areaText,labelText)
+	label.label-class #{labelText}
+		if placeholder
+			textarea.textarea.placeholder(name=name placeholder=placeholder) #{areaText}
 		else
-			textarea.textarea(placeholder=placeholder)
+			textarea.textarea(name=name) #{areaText}

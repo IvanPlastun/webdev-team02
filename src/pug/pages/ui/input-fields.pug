@@ -9,33 +9,31 @@ block content
 		.container.container--left.user-content.pt-35
 			h1 Поля ввода
 			.section-ui
-				+input('Поле для ввода','Введите имя',1)
+				+input('name','text','Введите имя','Поле для ввода')
 			pre.
-				+input('Поле для ввода','Введите имя',1)
+				+input('name','text','Введите имя','Поле для ввода')
 			
 			.title mixins/_input.pug
 			pre.
-				mixin input(labelText,placeholder,indNew)
-					label.label labelText
-						if indNew
-							input.input.indNew(type="text" placeholder=placeholder)
+				mixin input(name,type,placeholder,labelText)
+					label.label-class #{'#{labelText}'}
+						if placeholder
+							input.input.placeholder(type=type name=name placeholder=placeholder)
 						else
-							input.input(type="text" placeholder=placeholder)
-							
-
+							input.input(type="text" name=name)
 			.section-ui
-				+textarea('Сообщение - Textarea','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
+				+textarea('name','','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.','Сообщение - Textarea')
+					
 			pre.
-				+textarea('Сообщение - Textarea','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.',0)
+				+textarea('name','','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.','Сообщение - Textarea')
 			
 			.title mixins/_textarea.pug
 			pre.
-				mixin textarea(labelText,placeholder,indNew)
-					label.label labelText
-						if indNew
-							textarea.textarea.indNew(placeholder=placeholder)
+				mixin textarea(name,placeholder,areaText,labelText)
+					label.label-class #{'#{labelText}'}
+						if placeholder
+							textarea.textarea.placeholder(name=name placeholder=placeholder) #{'#{areaText}'}
 						else
-							textarea.textarea(placeholder=placeholder)
+							textarea.textarea(name=name) #{'#{areaText}'}
 
-			p Поля для ввода input и textarea используются для форм ввода новой информации и форм редактирования данных. Для форм ввода  необходимо передать параметр indNew, равный 1 (единица). Для редактирования полей - передать параметр indNew, равный 0 (ноль).
-			p Параметры: labelText - текст в теге Label, placeholder - текст в теге input, indNew - служебный флаг (1 для форм ввода, 0 для форм редактирования).
+			p Параметры: name - содержание атрибута name, type - содержание атрибута type, placeholder - содержание атрибута placeholder, labelText - текст в теге label, areaText - текст в теге textarea.

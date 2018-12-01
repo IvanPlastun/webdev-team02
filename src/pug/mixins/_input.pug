@@ -1,6 +1,6 @@
-mixin input(labelText,placeholder,indNew)
-	label.label #{labelText}
-		if indNew
-			input.input.indNew(type="text" placeholder=placeholder)
+mixin input(name,type,placeholder,labelText)
+	label.label-class #{labelText}
+		if placeholder
+			input.input.placeholder(type=type name=name placeholder=placeholder)
 		else
-			input.input(type="text" placeholder=placeholder)
+			input.input(type="text" name=name)
