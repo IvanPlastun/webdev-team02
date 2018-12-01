@@ -6,35 +6,45 @@ block variables
 
 block content
 	.main-wrapper
-		.container.container--left.user-content.pt-35
+		.container.container--left.pt-35
 			h1 Нотификации
 			
 			.section-ui
-				.mb-15
-					h2 Простая нотификация
-					+notification('notification--simple', 'Информация обновлена')
-				.mb-15
-					h2 Нотификация успех
-					+notification('notification--success', 'Запись создана успешно!')
-				.mb-15
-					h2 Нотификация ошибка
-					+notification('notification--error', 'Комментарий не может быть пустым')
-				.mb-15
-					+notification-prompt('Данный email уже занят', '#')
+				h2.mt-30.mb-20 Простая нотификация
+				+notification('', 'Информация обновлена')
+				
+				h2.mt-30.mb-20 Нотификация успех
+				+notification('success', 'Запись создана успешно!')
+
+				h2.mt-30.mb-20 Нотификация ошибка
+				+notification('error', 'Комментарий не может быть пустым')
+				.mb-20
+
+				+notification('error', 'Данный email уже занят')
+					p.
+						Используйте другой email чтобы создать новый аккаунт.
+					p.
+						Или воспользуйтесь #[a(href="#") восстановлением пароля], чтобы войти на сайт.
 			pre.
-				+notification('notification--simple', 'Информация обновлена')
+				+notification('', 'Информация обновлена')
 
-				+notification('notification--success', 'Запись создана успешно!')
+				+notification('success', 'Запись создана успешно!')
 
-				+notification('notification--error', 'Комментарий не может быть пустым')
+				+notification('error', 'Комментарий не может быть пустым')
 
-				+notification-prompt('Данный email уже занят', '#')
+				+notification('error', 'Данный email уже занят')
+					p.
+						Используйте другой email чтобы создать новый аккаунт.
+					p.
+						Или воспользуйтесь #[a(href="#") восстановлением пароля], чтобы войти на сайт.
 				
 			.title mixins/_notifications.pug
 			pre.
 				mixin notification(modifier, message)
-					div(class="notification " + modifier) #{'#{message}'}
-
-				mixin notification-prompt(message, link)
-					div(class="notification notification--error notification--spec") #{message}
-					div(class="notification notification--prompt") Используйте другой email чтобы создать новый аккаунт. Или воспользуйтесь #[a(class="notification__link" href= link) восстановлением пароля], чтобы войти на сайт.
+					div(class="notification notification--" + modifier)
+						div(class="notification__message") #{message}
+						if block
+							.notification__prompt
+								block
+						else
+							

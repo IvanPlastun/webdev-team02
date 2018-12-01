@@ -1,6 +1,8 @@
 mixin notification(modifier, message)
-	div(class="notification " + modifier) #{message}
-
-mixin notification-prompt(message, link)
-	div(class="notification notification--error notification--spec") #{message}
-	div(class="notification notification--prompt") Используйте другой email чтобы создать новый аккаунт. Или воспользуйтесь #[a(class="notification__link" href= link) восстановлением пароля], чтобы войти на сайт.
+	div(class="notification notification--" + modifier)
+		div(class="notification__message") #{message}
+		if block
+			.notification__prompt
+				block
+		else
+			
