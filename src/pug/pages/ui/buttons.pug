@@ -1,21 +1,82 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+	- var title = 'UI Buttons - Кнопки';
 	- var pageClass = 'body--dashboard';
 
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-			h1 Кнопки
-			
+		.section-ui--wrapper
 			.section-ui
-				+button('Текст кнопки', '#!')
-			pre.
-				+button('Текст кнопки', '#!')
-			
-			.title mixins/_buttons.pug
-			pre.
-				mixin button(text, link)
-					a(class="button" href= link)&attributes(attributes) #{text}
+				h2 normal
+				li.ui-buttom__item
+					+button('Вперед','#!','fa-arrow-right')
+				li.ui-buttom__item
+					+button-detailed('Подробнее','#!')
+				li.ui-buttom__item
+					+button-edit('Редактировать','#!')
+				li.ui-buttom__item
+					+button-remove('Удалить','#!')
+				li.ui-buttom__item
+					+button-save('Сохранить','#!')
+				li.ui-buttom__item
+					+button-enter('Войти','#!')
+				li.ui-buttom__item
+					+button-profile('Профиль', '#!')
+			.section-ui.section-ui__hover
+				h2 hover, focus
+				li.ui-buttom__item
+					+button('Вперед','#!','fa-arrow-right')
+				li.ui-buttom__item
+					+button-detailed('Подробнее','#!')
+				li.ui-buttom__item
+					+button-edit('Редактировать','#!')
+				li.ui-buttom__item
+					+button-remove('Удалить','#!')
+				li.ui-buttom__item
+					+button-save('Сохранить','#!')
+				li.ui-buttom__item
+					+button-enter('Войти','#!')
+				li.ui-buttom__item
+					+button-profile('Профиль', '#!')
+			.section-ui.section-ui__active
+				h2 active
+				li.ui-buttom__item
+					+button('Вперед','#!','fa-arrow-right')
+				li.ui-buttom__item
+					+button-detailed('Подробнее','#!')
+				li.ui-buttom__item
+					+button-edit('Редактировать','#!')
+				li.ui-buttom__item
+					+button-remove('Удалить','#!')
+				li.ui-buttom__item
+					+button-save('Сохранить','#!')
+				li.ui-buttom__item
+					+button-enter('Войти','#!')
+				li.ui-buttom__item
+					+button-profile('Профиль', '#!')
+		.container.container--left.user-content.pt-35
+			h1 Кнопки - малого размера
+			p Каждая кнопка может быть представлена в малом размере.
+			.section-ui--small
+				li.ui-buttom__item--small
+					+button-remove('Удалить','#!')
+				li.ui-buttom__item--small
+					+button-save('Сохранить','#!')
+				li.ui-buttom__item--small
+					+button-edit('Редактировать','#!')
+				li.ui-buttom__item--small
+					+button-detailed('Подробнее','#!')
+		.container.container--left.user-content.pt-35
+			h1 Кнопка - input type  
+			.section-ui
+				li.ui-buttom__item
+					+button-input('submit')
+
+
+block scripts
+	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+
+
 

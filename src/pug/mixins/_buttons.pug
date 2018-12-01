@@ -1,2 +1,58 @@
-mixin button(text, link)
-	a(class="button" href= link)&attributes(attributes) #{text}
+
+// Mixin Buttons
+
+
+mixin button(text, link, icon)
+	- iconClass = icon || ''
+	a.button.button-ahead(href=link)
+		|#{text}
+		i(class="fas " + iconClass)
+
+mixin button-detailed(text, link, icon)
+	if icon
+		a.button.button-detailed.buttonSmall-detailed(href=link)
+			i(class="fas" + icon) #{text}
+	else
+		a.button.button-detailed.buttonSmall-detailed(href=link) #{text}
+
+mixin button-edit(text, link, icon)
+	if icon
+		a.button.button-edit.buttonSmall-edit(href=link)
+			i(class="fas" + icon) #{text}
+	else
+		a.button.button-edit.buttonSmall-edit(href=link) #{text}
+
+mixin button-remove(text, link, icon)
+	if icon
+		a.button.button-remove.buttonSmall.buttonSmall-remove(href=link)
+			i(class="fas" + icon) #{text}
+	else
+		a.button.button-remove.buttonSmall-remove(href=link) #{text}
+
+mixin button-save(text, link, icon)
+	if icon
+		a.button.button-save.buttonSmall-save(href=link)
+			i(class="fas" + icon) #{text}
+	else
+		a.button.button-save.buttonSmall-save(href=link) #{text}
+
+mixin button-enter(text, link, icon)
+	if icon
+		a.button.button-enter(href=link)
+			i(class="fas" + icon) #{text}
+	else
+		a.button.button-enter(href=link) #{text}
+
+
+mixin button-profile(text, link, icon)
+	if icon
+		a.button.button-profile(href=link)
+			i(class="fas" + icon) #{text}
+	else
+		a.button.button-profile(href=link) #{text}
+
+
+//Mixin Button Input
+
+mixin button-input(type)
+	input.button-input(type=type)
