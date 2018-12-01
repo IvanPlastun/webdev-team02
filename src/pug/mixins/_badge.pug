@@ -1,3 +1,2 @@
-mixin badge(text, setting)
-    - set = setting || ''
-    span(class=set).badge #{text}
+mixin badge(text)
+    span.badge&attributes(attributes) #{text}

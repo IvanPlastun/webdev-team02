@@ -14,12 +14,11 @@ block content
                 +badge('Пользователь')
             .section-ui
                 .title-2 Бейдж с настройкой
-                +badge('Пользователь', 'badge--color')
+                +badge('Пользователь')(class="badge--color")
             pre.
                 +badge('Пользователь')
-                +badge('Пользователь', 'badge--color')
+                +badge('Пользователь')(class="badge--color")
             .title-2 mixins/_badge.pug
             pre.
-                mixin badge(text, setting)
-                    - set = setting || ''
-                    span(class=set).badge #{'#{text}'}
+                mixin badge(text)
+                    span.badge&attributes(attributes) #{'#{text}'}
