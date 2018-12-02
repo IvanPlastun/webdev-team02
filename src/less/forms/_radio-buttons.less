@@ -1,4 +1,4 @@
-.radio__label {
+.radio {
 	display: block;
 	margin-bottom: 20px;
 	cursor: pointer;
@@ -9,7 +9,7 @@
 	}
 }
 
-.radio__radiobutton {
+.radio__label {
 	display: inline-block;
 	width: 1.25rem;//20px
 	height: 1.25rem;//20px
@@ -22,7 +22,7 @@
 	.transition
 }
 
-.radio__input:checked + .radio__radiobutton {
+.radio__input:checked + .radio__label {
 	background-color: darken(@blue , 10%);
 	border: 0.375rem solid @white;//6px
 	box-shadow: 0px 0px 0px 1px #bcc7ce;
@@ -37,6 +37,6 @@
 	z-index: -1;
 }
 
-.radio__input:focus + .radio__radiobutton {
+.radio__input:focus + .radio__label {
 	box-shadow: 0px 0px 10px lighten(@blue, 20%);
 }
