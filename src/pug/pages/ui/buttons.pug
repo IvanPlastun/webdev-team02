@@ -7,76 +7,80 @@ block variables
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-		.section-ui--wrapper
+			h1 Кнопки
+			h2 normal, hover focus, active
 			.section-ui
-				h2 normal
-				li.ui-buttom__item
-					+button('Вперед','#!','fa-arrow-right')
-				li.ui-buttom__item
-					+button-detailed('Подробнее','#!')
-				li.ui-buttom__item
-					+button-edit('Редактировать','#!')
-				li.ui-buttom__item
-					+button-remove('Удалить','#!')
-				li.ui-buttom__item
-					+button-save('Сохранить','#!')
-				li.ui-buttom__item
-					+button-enter('Войти','#!')
-				li.ui-buttom__item
-					+button-profile('Профиль', '#!')
-			.section-ui.section-ui__hover
-				h2 hover, focus
-				li.ui-buttom__item
-					+button('Вперед','#!','fa-arrow-right')
-				li.ui-buttom__item
-					+button-detailed('Подробнее','#!')
-				li.ui-buttom__item
-					+button-edit('Редактировать','#!')
-				li.ui-buttom__item
-					+button-remove('Удалить','#!')
-				li.ui-buttom__item
-					+button-save('Сохранить','#!')
-				li.ui-buttom__item
-					+button-enter('Войти','#!')
-				li.ui-buttom__item
-					+button-profile('Профиль', '#!')
-			.section-ui.section-ui__active
-				h2 active
-				li.ui-buttom__item
-					+button('Вперед','#!','fa-arrow-right')
-				li.ui-buttom__item
-					+button-detailed('Подробнее','#!')
-				li.ui-buttom__item
-					+button-edit('Редактировать','#!')
-				li.ui-buttom__item
-					+button-remove('Удалить','#!')
-				li.ui-buttom__item
-					+button-save('Сохранить','#!')
-				li.ui-buttom__item
-					+button-enter('Войти','#!')
-				li.ui-buttom__item
-					+button-profile('Профиль', '#!')
+				+button('Вперед','#!','fa-arrow-right')
+			pre.
+				+button('Вперед','#!','fa-arrow-right')
+			.section-ui
+				+buttonMore('Подробнее','#!')
+			pre.
+				+buttonMore('Подробнее','#!')
+			.section-ui
+				+buttonEdit('Редактировать','#!')
+			pre.
+				+buttonEdit('Редактировать','#!')
+			.section-ui
+				+buttonRemove('Удалить','#!')
+			pre.
+				+buttonEdit('Редактировать','#!')
+			.section-ui
+				+buttonSave('Сохранить','#!')
+			pre.
+				+buttonSave('Сохранить','#!')
+			.section-ui
+				+buttonEnter('Войти','#!')
+			pre.
+				+buttonEnter('Войти','#!')
+			.section-ui
+				+buttonProfile('Профиль', '#!')
+			pre.
+				+buttonProfile('Профиль', '#!')
 		.container.container--left.user-content.pt-35
 			h1 Кнопки - малого размера
 			p Каждая кнопка может быть представлена в малом размере.
-			.section-ui--small
-				li.ui-buttom__item--small
-					+button-remove('Удалить','#!')
-				li.ui-buttom__item--small
-					+button-save('Сохранить','#!')
-				li.ui-buttom__item--small
-					+button-edit('Редактировать','#!')
-				li.ui-buttom__item--small
-					+button-detailed('Подробнее','#!')
-		.container.container--left.user-content.pt-35
-			h1 Кнопка - input type  
 			.section-ui
-				li.ui-buttom__item
-					+button-input('submit')
-
-
+				+buttonRemove('Удалить','#!','small')
+			pre.
+				+buttonRemove('Удалить','#!','small')
+			.section-ui
+				+buttonSave('Сохранить','#!','small')
+			pre.
+				+buttonSave('Сохранить','#!','small')
+			.section-ui
+				+buttonMore('Подробнее','#!','small')
+			pre.
+				+buttonMore('Подробнее','#!','small')
+			.section-ui
+				+buttonEdit('Редактировать','#!','small')
+			pre.
+				+buttonEdit('Редактировать','#!','small')
+		.container.container--left.user-content.pt-35
+			h1 Кнопки - Input
+			.section-ui
+				+buttonSubmit('Подробнее', 'infoButton','more')
+			pre.
+				+buttonSubmit('Подробнее', 'infoButton','more')
+			.section-ui
+				+buttonSubmit('Редактировать', 'infoButton','edit')
+			pre.
+				+buttonSubmit('Редактировать', 'infoButton','edit')
+			.section-ui
+				+buttonSubmit('Удалить', 'infoButton','remove')
+			pre.
+				+buttonSubmit('Удалить', 'infoButton','remove')
+			.section-ui
+				+buttonSubmit('Сохранить', 'infoButton','save')
+			pre.
+				+buttonSubmit('Сохранить', 'infoButton','save')
+			.section-ui
+				+buttonSubmit('Войти', 'infoButton','enter')
+			pre.
+				+buttonSubmit('Войти', 'infoButton','enter')
+			.section-ui
+				+buttonSubmit('Профиль', 'infoButton','profile')
+			pre.
+				+buttonSubmit('Профиль', 'infoButton','profile')
 block scripts
 	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
-
-
-

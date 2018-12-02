@@ -1,58 +1,66 @@
 
 // Mixin Buttons
-
-
 mixin button(text, link, icon)
-	- iconClass = icon || ''
-	a.button.button-ahead(href=link)
-		|#{text}
-		i(class="fas " + iconClass)
-
-mixin button-detailed(text, link, icon)
 	if icon
-		a.button.button-detailed.buttonSmall-detailed(href=link)
-			i(class="fas" + icon) #{text}
-	else
-		a.button.button-detailed.buttonSmall-detailed(href=link) #{text}
+		a.button.button-regular(href=link)
+			|#{text}
+			i(class="fas " + icon)
+	else 
+		a.button.button-regular(href=link)
+			|#{text}
 
-mixin button-edit(text, link, icon)
-	if icon
-		a.button.button-edit.buttonSmall-edit(href=link)
-			i(class="fas" + icon) #{text}
+mixin buttonMore(text, link, small)
+	if small
+		a.button.button-more(href=link, class=small) #{text}
 	else
-		a.button.button-edit.buttonSmall-edit(href=link) #{text}
-
-mixin button-remove(text, link, icon)
-	if icon
-		a.button.button-remove.buttonSmall.buttonSmall-remove(href=link)
-			i(class="fas" + icon) #{text}
+		a.button.button-more(href=link) #{text}
+		
+mixin buttonEdit(text, link, small)
+	if small
+		a.button.button-edit(href=link, class=small) #{text}
+		
 	else
-		a.button.button-remove.buttonSmall-remove(href=link) #{text}
+		a.button.button-edit(href=link) #{text}
 
-mixin button-save(text, link, icon)
-	if icon
-		a.button.button-save.buttonSmall-save(href=link)
-			i(class="fas" + icon) #{text}
+mixin buttonRemove(text, link, small)
+	if small
+		a.button.button-remove(href=link, class=small) #{text}
 	else
-		a.button.button-save.buttonSmall-save(href=link) #{text}
+		a.button.button-remove(href=link) #{text}
 
-mixin button-enter(text, link, icon)
+mixin buttonSave(text, link, small)
+	if small
+		a.button.button-save(href=link, class=small) #{text}
+	else
+		a.button.button-save(href=link) #{text}
+
+mixin buttonEnter(text, link, icon)
 	if icon
 		a.button.button-enter(href=link)
 			i(class="fas" + icon) #{text}
 	else
 		a.button.button-enter(href=link) #{text}
 
-
-mixin button-profile(text, link, icon)
+mixin buttonProfile(text, link, icon)
 	if icon
 		a.button.button-profile(href=link)
 			i(class="fas" + icon) #{text}
 	else
 		a.button.button-profile(href=link) #{text}
 
-
 //Mixin Button Input
-
-mixin button-input(type)
-	input.button-input(type=type)
+mixin buttonSubmit(text, name, type)
+	if type == "edit"
+		input.button(type="submit", name=name, class="button-edit", value=text)&attributes(attributes)
+	else if type == "remove"
+		input.button(type="submit", name=name, class="button-remove", value=text)&attributes(attributes)
+	else if type == "save"
+		input.button(type="submit", name=name, class="button-save", value=text)&attributes(attributes)
+	else if type == "enter"
+		input.button(type="submit", name=name, class="button-enter", value=text)&attributes(attributes)
+	else if type == "profile"
+		input.button(type="submit", name=name, class="button-profile", value=text)&attributes(attributes)
+	else if type == "more"
+		input.button(type="submit", name=name, class="button-more", value=text)&attributes(attributes)
+	else
+		input.button(type="submit", name=name, value=text)&attributes(attributes)

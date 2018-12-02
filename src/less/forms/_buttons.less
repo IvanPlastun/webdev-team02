@@ -13,24 +13,10 @@
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1;
-	margin-bottom: 30px;
-	&-ahead{
-	background-color: @white;
-	color:@blue;
-	border: 2px solid @gray;
-	&:hover,
-	&:focus {
-		background-color: @gray;
-	}
 
-	&:active {
-		background-color: @grayActive;
-	}
-	}
 }
 
-
-.button-detailed{
+.button-regular{
 	background-color: @white;
 	color:@blue;
 	border: 2px solid @gray;
@@ -41,6 +27,21 @@
 
 	&:active {
 		background-color: @grayActive;
+		border: 2px solid transparent	}
+}
+.button-more{
+	background-color: @white;
+	color:@blue;
+	border: 2px solid @gray;
+	&:hover,
+	&:focus {
+		background-color: @gray;
+		border: 2px solid transparent;
+	}
+
+	&:active {
+		background-color: @grayActive;
+		border: 2px solid transparent;
 	}
 }
 
@@ -96,104 +97,6 @@
 		background-color: @bluesActive;
 	}
 }
-
-//Button Hover
-
-.section-ui__hover{
-
-	.button-ahead{
-	background-color: @gray;
-	color:@blue;
-	border: 2px solid @gray;
-	}
-	.button-detailed{
-		background-color: @gray;
-		color:@blue;
-		border: 2px solid @gray;
-	
-	}
-
-	.button-edit{
-		background-color: @yellowHover;
-		color:@white;
-		border: 2px solid transparent;
-
-	}
-	.button-remove{
-		background-color:@redHover;
-		color:@white;
-		border: 2px solid transparent;
-	}
-
-	.button-save{
-		background-color: @blueHover;
-		color:@white;
-		border: 2px solid transparent;
-
-	}
-
-	.button-enter{
-		background-color: @bluesHover;
-		color:@white;
-		border: 2px solid transparent;
-		box-shadow: 0 6px 16px rgba(23, 50, 66, 0.75);
-	}
-
-}
-
-//Button Active
-
-.section-ui__active{
-	.button-ahead{
-	background-color: @grayActive;
-	color:@blue;
-	border: 2px solid transparent;
-	}
-	.button-detailed{
-		background-color: @grayActive;
-		color:@blue;
-		border: 2px solid transparent;
-	
-	}
-	.button-edit{
-		background-color: @yelowActive;
-		color:@white;
-		border: 2px solid transparent;
-
-	}
-	.button-remove{
-		background-color:@redActive;
-		color:@white;
-		border: 2px solid transparent;
-	}
-
-	.button-save{
-		background-color: @blueActive;
-		color:@white;
-		border: 2px solid transparent;
-
-	}
-
-	.button-enter{
-		background-color: @bluesActive;
-		color:@white;
-		border: 2px solid transparent;
-		box-shadow: 0 6px 16px rgba(23, 50, 66, 0.75);
-	}
-
-}
-
-
-
-
-//Button Input
-
-
-
-
-
-
-
 
 
 // Icon in Button
