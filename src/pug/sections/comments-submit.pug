@@ -1,0 +1,8 @@
+p.title-3 Оставить комментарий
+.comments-submit
+    +avatar('avatar.jpg', 'alt text avatar', 'small')
+    .comments-form
+        b.comments__author Юрий Ключевский
+        +notification('Комментарий не может быть пустым', 'error')
+        +textarea('name','Присоединиться к обсуждению...','','')
+        +button('Опубликовать', '#!')(class="mt-10")
