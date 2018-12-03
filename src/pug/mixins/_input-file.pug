@@ -1,9 +1,9 @@
-mixin file(text,name,id,multiple)
-    if true
-        input(type="file" name=name class="input-file" id=id data-multiple-caption="{count} файлов выбрано" multiple)
+mixin file(text, textStatus, name, id, multiple)
+    if multiple
+        input(type="file" name=name class="input-file" id=id data-multiple-caption="{count}" multiple)
         label(class="input-file-mark" for=id) #{text}
-        span
+        span #{textStatus}
     else
-        input(type="file" name=name class="input-file" data-multiple-caption="{count} файлов выбрано")
-        label(class="input-file-mark" for="fileDownload") #{text}
-        span
+        input(type="file" name=name class="input-file" id=id data-multiple-caption="{count}")
+        label(class="input-file-mark" for=id) #{text}
+        span #{textStatus}
