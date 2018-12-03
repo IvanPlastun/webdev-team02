@@ -1,44 +1,16 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Шапка администратора - UI-kit и HTML фреймворк - Документация';
+	- var title = 'Поля ввода - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-			h1 Шапка администратора
+			h1 Поля ввода
 			.section-ui
-				
-			.admin-header
-				.admin-header__left 			
-					.user
-						+avatar('avatar.jpg', 'alt text avatar', 'small')
-						.brif
-							p hhhhhhhhhhhh
-							+badge('Администратор')
-					.admin-nav
-						a(href="#!")
-							i.fas.fa-plus-circle
-							| Пост
-						a(href="#!")
-							i.fas.fa-plus-circle
-							| Работа
-						a(href="#!")
-							i.fas.fa-edit
-							| Обо мне
-						a(href="#!")
-							i.fas.fa-edit
-							| Контакты
-						a(href="#!")
-							i.fas.fa-envelope
-							| Сообщения
-				.admin-header__right
-					a(href="#!")
-						i.fas.fa-sign-out-alt
-						| Выход
-
-//-			pre.
+				+input('name','text','Введите имя','Поле для ввода')
+			pre.
 				+input('name','text','Введите имя','Поле для ввода')
 			
 			.title mixins/_input.pug
