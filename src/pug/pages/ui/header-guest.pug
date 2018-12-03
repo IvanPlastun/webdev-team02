@@ -12,13 +12,16 @@ block content
 			.section-ui
 				include ../../sections/header-guest.pug
 			pre.
-				include ../../sections/comments-unregistered.pug
-			
-			p.
-				Количество выходов в родительскую директорию может отличаться, в зависимости от вложенности
-				страницы
-			.title sections/comments-unregistered.pug
+				include ../../sections/header-guest.pug
+			.title sections/header-guest.pug
 			pre.
-				.comments-unregistered
-					p.comments-unregistered__note.
-						\#[+link('#', 'Войдите')]} или \#[+link('#', 'зарегистрируйтесь')] чтобы оставить комментарий
+				.header
+				.row.header__wrapper
+					.logo
+						.logo__img
+						.logo__description--first Digital Lifestyle
+						.logo__description--second Сайт IT специалиста
+					.user-block
+						+buttons-guest('Зарегистрироваться', 'Войти')
+				.row
+					include ./navigation.pug

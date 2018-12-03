@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Шапка-пользователь - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Шапка - пользователь
+			
+			.section-ui
+				include ../../sections/header-user.pug
+			pre.
+				include ../../sections/header-user.pug
+			.title sections/header-user.pug
+			pre.
+				.header
+				.row.header__wrapper
+					.logo
+						.logo__img
+						.logo__description--first Digital Lifestyle
+						.logo__description--second Сайт IT специалиста
+					.user-block
+						+header-user-block()
+				.row
+					include ./navigation.pug
