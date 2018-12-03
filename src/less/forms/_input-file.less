@@ -1,3 +1,8 @@
+@borderGray: #999;
+@lightGray:#b1bfc7;
+@bluefileHover: #1e6791;
+@bluefileActive: #004c79;
+
 .input-file {
     width: 0.1px;
 	height: 0.1px;
@@ -10,9 +15,9 @@
 .input-file-mark {
     .transition;
     display: inline-block;
-    background-color: #b1bfc7;
-    color: white;
-    border: 1px solid #999;
+    background-color: @lightGray;
+    color: @white;
+    border: 1px solid @borderGray;
     font-size: 1rem;
     border-radius: 4px;
     padding: 10px 12px;
@@ -21,11 +26,11 @@
 
 .input-file:focus + .input-file-mark,
 .input-file + .input-file-mark:hover {
-    background-color: #1e6791;
+    background-color: @bluefileHover;
 }
 
 .input-file + .input-file-mark:active {
-    background-color: #004c79;
+    background-color: @bluefileActive;
 }
 
 .input-file-mark + span {
