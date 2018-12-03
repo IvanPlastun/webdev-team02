@@ -1,0 +1,61 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Шапка администратора - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Шапка администратора
+			.section-ui
+				
+			.admin-header
+				.admin-header__left 			
+					.user
+						+avatar('avatar.jpg', 'alt text avatar', 'small')
+						.brif
+							p hhhhhhhhhhhh
+							+badge('Администратор')
+					.admin-nav
+						a(href="#!")
+							i.fas.fa-plus-circle
+							| Пост
+						a(href="#!")
+							i.fas.fa-plus-circle
+							| Работа
+						a(href="#!")
+							i.fas.fa-edit
+							| Обо мне
+						a(href="#!")
+							i.fas.fa-edit
+							| Контакты
+						a(href="#!")
+							i.fas.fa-envelope
+							| Сообщения
+				.admin-header__right
+					a(href="#!")
+						i.fas.fa-sign-out-alt
+						| Выход
+
+//-			pre.
+				+input('name','text','Введите имя','Поле для ввода')
+			
+			.title mixins/_input.pug
+			pre.
+				mixin input(name,type,placeholder,labelText)
+					label.label-class(for="input-robe") #{'#{labelText}'}
+					input.input.form-control#input-robe(name=name type=type placeholder=placeholder)
+			.section-ui
+				+textarea('name','Введите текст','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.','Сообщение - Textarea')
+					
+			pre.
+				+textarea('name','Введите текст','Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.','Сообщение - Textarea')
+			
+			.title mixins/_textarea.pug
+			pre.
+				mixin textarea(name,placeholder,areaText,labelText)
+					label.label-class(for="textarea-robe") #{'#{labelText}'}
+					textarea.textarea#textarea-robe(name=name placeholder=placeholder) #{'#{areaText}'}
+
+			p Параметры: name - содержание атрибута name, type - содержание атрибута type, placeholder - содержание атрибута placeholder, labelText - текст в теге label, areaText - текст в теге textarea.
