@@ -7,60 +7,21 @@ block variables
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-			h1 Кнопки
-			.section-ui-box  
-				.section-ui.section-ui-column
-					h2 Buttons normal
-					.section-ui
-						+button('Подробнее', '#', 'primary')
-					.section-ui
-						+button('Редактировать', '#', 'edit')
-					.section-ui
-						+button('Удалить', '#', 'delete')
-					.section-ui
-						+button('Сохранить', '#', 'save')
-					.section-ui
-						+button('Войти', '#', 'enter')
-					.section-ui
-						+button('Профиль', '#', 'profile')
-				.section-ui.section-ui-column
-					h2 Buttons with icon
-					.section-ui
-						+buttonWithIcon('Вперед', '#', 'fa-arrow-right', 'next', 'right')
-					.section-ui
-						+buttonWithIcon('Назад', '#', 'fa-arrow-left', 'previous', 'left')
-					.section-ui
-						+buttonWithIcon('Редактировать', '#', 'fa-edit', 'edit', 'right')
-					.section-ui
-						+buttonWithIcon('Удалить', '#', 'fa-trash-alt', 'delete', 'right')
-					.section-ui
-						+buttonWithIcon('Сохранить', '#', 'fa-save', 'save', 'right')
-					.section-ui
-						+buttonWithIcon('Войти', '#', 'fa-sign-in-alt', 'enter', 'left')
-				.section-ui.section-ui-column
-						h2 Submit button
-						.section-ui
-							+buttonSubmit('Подробнее', 'infoButton')
-						.section-ui
-							+buttonSubmit('Редактировать', 'edit-button', 'edit')
-						.section-ui
-							+buttonSubmit('Удалить', 'delete-button', 'delete')
-						.section-ui
-							+buttonSubmit('Сохранить', 'save-button', 'save')
-						.section-ui
-							+buttonSubmit('Войти', 'enter-button', 'enter')
-						.section-ui
-							+buttonSubmit('Профиль', 'profile-button', 'profile')
-				.section-ui.section-ui-column
-						h2 Button small
-						.section-ui
-							+button('Подробнее', '#', 'smallPrimary', 'smallPrimary')
-						.section-ui
-							+button('Удалить', '#', 'smallDelete', 'smallDelete')
-						.section-ui
-							+button('Редактировать', '#', 'smallEdit', 'smallEdit')
-						.section-ui
-							+button('Сохранить', '#', 'smallSave', 'smallSave')
+			h1 Кнопки  
+			.section-ui
+				h2 Buttons normal
+				.section-ui
+					+button('Подробнее', '#', 'primary')
+				.section-ui
+					+button('Редактировать', '#', 'edit')
+				.section-ui
+					+button('Удалить', '#', 'delete')
+				.section-ui
+					+button('Сохранить', '#', 'save')
+				.section-ui
+					+button('Войти', '#', 'enter')
+				.section-ui
+					+button('Профиль', '#', 'profile')
 			pre.
 				+button('Подробнее', '#', 'primary')
 				+button('Редактировать', '#', 'edit')
@@ -68,6 +29,19 @@ block content
 				+button('Сохранить', '#', 'save')
 				+button('Войти', '#', 'enter')
 				+button('Профиль', '#', 'profile')
+			h2 Buttons with icon
+			.section-ui
+				+buttonWithIcon('Вперед', '#', 'fa-arrow-right', 'next', 'right')
+			.section-ui
+				+buttonWithIcon('Назад', '#', 'fa-arrow-left', 'previous', 'left')
+			.section-ui
+				+buttonWithIcon('Редактировать', '#', 'fa-edit', 'edit', 'right')
+			.section-ui
+				+buttonWithIcon('Удалить', '#', 'fa-trash-alt', 'delete', 'right')
+			.section-ui
+				+buttonWithIcon('Сохранить', '#', 'fa-save', 'save', 'right')
+			.section-ui
+				+buttonWithIcon('Войти', '#', 'fa-sign-in-alt', 'enter', 'left')
 			pre.
 				+buttonWithIcon('Вперед', '#', 'fa-arrow-right', 'next', 'right')
 				+buttonWithIcon('Назад', '#', 'fa-arrow-left', 'previous', 'left')
@@ -75,6 +49,19 @@ block content
 				+buttonWithIcon('Удалить', '#', 'fa-trash-alt', 'delete', 'right')
 				+buttonWithIcon('Сохранить', '#', 'fa-save', 'save', 'right')
 				+buttonWithIcon('Войти', '#', 'fa-sign-in-alt', 'enter', 'left')
+			h2 Submit button
+			.section-ui
+				+buttonSubmit('Подробнее', 'infoButton')
+			.section-ui
+				+buttonSubmit('Редактировать', 'edit-button', 'edit')
+			.section-ui
+				+buttonSubmit('Удалить', 'delete-button', 'delete')
+			.section-ui
+				+buttonSubmit('Сохранить', 'save-button', 'save')
+			.section-ui
+				+buttonSubmit('Войти', 'enter-button', 'enter')
+			.section-ui
+				+buttonSubmit('Профиль', 'profile-button', 'profile')
 			pre.
 				+buttonSubmit('Подробнее', 'infoButton')
 				+buttonSubmit('Редактировать', 'edit-button', 'edit')
@@ -82,6 +69,15 @@ block content
 				+buttonSubmit('Сохранить', 'save-button', 'save')
 				+buttonSubmit('Войти', 'enter-button', 'enter')
 				+buttonSubmit('Профиль', 'profile-button', 'profile')
+			h2 Button small
+			.section-ui
+				+button('Подробнее', '#', 'smallPrimary', 'smallPrimary')
+			.section-ui
+				+button('Удалить', '#', 'smallDelete', 'smallDelete')
+			.section-ui
+				+button('Редактировать', '#', 'smallEdit', 'smallEdit')
+			.section-ui
+				+button('Сохранить', '#', 'smallSave', 'smallSave')
 			pre.
 				+button('Подробнее', '#', 'smallPrimary', 'smallPrimary')
 				+button('Удалить', '#', 'smallDelete', 'smallDelete')
