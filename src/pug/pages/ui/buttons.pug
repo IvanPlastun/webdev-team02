@@ -1,86 +1,85 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'UI Buttons - Кнопки';
+	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-			h1 Кнопки
-			h2 normal, hover focus, active
+			h1 Кнопки  
 			.section-ui
-				+button('Вперед','#!','fa-arrow-right')
+				h2 Buttons normal
+				.section-ui
+					+button('Подробнее', '#', 'primary')
+				.section-ui
+					+button('Редактировать', '#', 'edit')
+				.section-ui
+					+button('Удалить', '#', 'delete')
+				.section-ui
+					+button('Сохранить', '#', 'save')
+				.section-ui
+					+button('Войти', '#', 'enter')
+				.section-ui
+					+button('Профиль', '#', 'profile')
 			pre.
-				+button('Вперед','#!','fa-arrow-right')
+				+button('Подробнее', '#', 'primary')
+				+button('Редактировать', '#', 'edit')
+				+button('Удалить', '#', 'delete')
+				+button('Сохранить', '#', 'save')
+				+button('Войти', '#', 'enter')
+				+button('Профиль', '#', 'profile')
+			h2 Submit button
 			.section-ui
-				+buttonMore('Подробнее','#!')
-			pre.
-				+buttonMore('Подробнее','#!')
+				+buttonSubmit('Подробнее', 'infoButton')
 			.section-ui
-				+buttonEdit('Редактировать','#!')
-			pre.
-				+buttonEdit('Редактировать','#!')
+				+buttonSubmit('Редактировать', 'edit-button', 'edit')
 			.section-ui
-				+buttonRemove('Удалить','#!')
-			pre.
-				+buttonEdit('Редактировать','#!')
+				+buttonSubmit('Удалить', 'delete-button', 'delete')
 			.section-ui
-				+buttonSave('Сохранить','#!')
-			pre.
-				+buttonSave('Сохранить','#!')
+				+buttonSubmit('Сохранить', 'save-button', 'save')
 			.section-ui
-				+buttonEnter('Войти','#!')
-			pre.
-				+buttonEnter('Войти','#!')
+				+buttonSubmit('Войти', 'enter-button', 'enter')
 			.section-ui
-				+buttonProfile('Профиль', '#!')
+				+buttonSubmit('Профиль', 'profile-button', 'profile')
 			pre.
-				+buttonProfile('Профиль', '#!')
-		.container.container--left.user-content.pt-35
-			h1 Кнопки - малого размера
-			p Каждая кнопка может быть представлена в малом размере.
+				+buttonSubmit('Подробнее', 'infoButton')
+				+buttonSubmit('Редактировать', 'edit-button', 'edit')
+				+buttonSubmit('Удалить', 'delete-button', 'delete')
+				+buttonSubmit('Сохранить', 'save-button', 'save')
+				+buttonSubmit('Войти', 'enter-button', 'enter')
+				+buttonSubmit('Профиль', 'profile-button', 'profile')
+			h2 Button small
 			.section-ui
-				+buttonRemove('Удалить','#!','small')
-			pre.
-				+buttonRemove('Удалить','#!','small')
+				+button('Подробнее', '#', 'smallPrimary', 'smallPrimary')
 			.section-ui
-				+buttonSave('Сохранить','#!','small')
-			pre.
-				+buttonSave('Сохранить','#!','small')
+				+button('Удалить', '#', 'smallDelete', 'smallDelete')
 			.section-ui
-				+buttonMore('Подробнее','#!','small')
-			pre.
-				+buttonMore('Подробнее','#!','small')
+				+button('Редактировать', '#', 'smallEdit', 'smallEdit')
 			.section-ui
-				+buttonEdit('Редактировать','#!','small')
+				+button('Сохранить', '#', 'smallSave', 'smallSave')
 			pre.
-				+buttonEdit('Редактировать','#!','small')
-		.container.container--left.user-content.pt-35
-			h1 Кнопки - Input
+				+button('Подробнее', '#', 'smallPrimary', 'smallPrimary')
+				+button('Удалить', '#', 'smallDelete', 'smallDelete')
+				+button('Редактировать', '#', 'smallEdit', 'smallEdit')
+				+button('Сохранить', '#', 'smallSave', 'smallSave')
+			h2 Buttons with icon
 			.section-ui
-				+buttonSubmit('Подробнее', 'infoButton','more')
-			pre.
-				+buttonSubmit('Подробнее', 'infoButton','more')
+				+buttonWithIcon('Вперед', '#', 'fa-arrow-right', 'next', 'right')
 			.section-ui
-				+buttonSubmit('Редактировать', 'infoButton','edit')
-			pre.
-				+buttonSubmit('Редактировать', 'infoButton','edit')
+				+buttonWithIcon('Назад', '#', 'fa-arrow-left', 'previous', 'left')
 			.section-ui
-				+buttonSubmit('Удалить', 'infoButton','remove')
-			pre.
-				+buttonSubmit('Удалить', 'infoButton','remove')
+				+buttonWithIcon('Редактировать', '#', 'fa-edit', 'edit', 'right')
 			.section-ui
-				+buttonSubmit('Сохранить', 'infoButton','save')
-			pre.
-				+buttonSubmit('Сохранить', 'infoButton','save')
+				+buttonWithIcon('Удалить', '#', 'fa-trash-alt', 'delete', 'right')
 			.section-ui
-				+buttonSubmit('Войти', 'infoButton','enter')
-			pre.
-				+buttonSubmit('Войти', 'infoButton','enter')
+				+buttonWithIcon('Сохранить', '#', 'fa-save', 'save', 'right')
 			.section-ui
-				+buttonSubmit('Профиль', 'infoButton','profile')
+				+buttonWithIcon('Войти', '#', 'fa-sign-in-alt', 'enter', 'left')
 			pre.
-				+buttonSubmit('Профиль', 'infoButton','profile')
-block scripts
-	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+				+buttonWithIcon('Вперед', '#', 'fa-arrow-right', 'next', 'right')
+				+buttonWithIcon('Назад', '#', 'fa-arrow-left', 'previous', 'left')
+				+buttonWithIcon('Редактировать', '#', 'fa-edit', 'edit', 'right')
+				+buttonWithIcon('Удалить', '#', 'fa-trash-alt', 'delete', 'right')
+				+buttonWithIcon('Сохранить', '#', 'fa-save', 'save', 'right')
+				+buttonWithIcon('Войти', '#', 'fa-sign-in-alt', 'enter', 'left')
