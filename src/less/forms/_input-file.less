@@ -1,0 +1,37 @@
+.input-file {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.input-file-mark {
+    .transition;
+    display: inline-block;
+    background-color: #b1bfc7;
+    color: white;
+    border: 1px solid #999;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.input-file:focus + .input-file-mark,
+.input-file + .input-file-mark:hover {
+    background-color: #1e6791;
+}
+
+.input-file + .input-file-mark:active {
+    background-color: #004c79;
+}
+
+.input-file-mark + span {
+	color: #1E6791;
+	vertical-align: top;
+	margin: 12px 0 0 10px;
+	display: inline-block;
+	font-weight: 600;
+}

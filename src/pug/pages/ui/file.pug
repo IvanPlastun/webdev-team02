@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - var title = 'Поле file - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+        .title-1 Поле file
+        .section-ui
+            .title-2 Выбор одного файла
+            +file('Выбрать файл','fileUpload','fileUpload',false)
+            .title-2 Выбор нескольких файлов
+            +file('Выбрать файл','fileUpload-1','fileUpload-1',true)
+        pre.
+            +file('Выбрать файл','fileUpload','fileUpload',false)
+            +file('Выбрать файл','fileUpload-1','fileUpload-1',true)
+        .title-2 mixins/_input-file.pug
+        pre.
+            mixin file(text,name,id,multiple)
+                if true
+                    input(type="file" name=name class="input-file" id=id data-multiple-caption="{count} файлов выбрано" multiple)
+                    label(class="input-file-mark" for=id) #{'#{text}'}
+                    span
+                else
+                    input(type="file" name=name class="input-file" data-multiple-caption="{count} файлов выбрано")
+                    label(class="input-file-mark" for="fileDownload") #{'#{text}'}
+                    span
