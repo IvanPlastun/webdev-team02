@@ -2,12 +2,12 @@ mixin cardBlog(img, title, link)
     .card.card__plate-blog
         .card__img-blog.mb-15
             img(src=img)
-        .card__title.mb-15 #{title}
-        +button('Читать',link)
+        .card__title-blog.mb-15 #{title}
+        +button('Читать', link)
         
 mixin cardPortfolio(img, title, link)
     .card.card__plate-portfolio
         .card__img-portfolio.mb-15
             img(src=img)
-        .card__title.mb-15 #{title}
-        +button('Смотреть кейс',link)
+        .card__title-portfolio.mb-20 #{title}
+        +button('Смотреть кейс', link)

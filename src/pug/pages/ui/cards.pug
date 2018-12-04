@@ -8,7 +8,7 @@ block content
     .main-wrapper
         .container.container--left.user-content.pt-35
             h1 Карточки
-            
+
             .title-4 Карточка - Пост в Блоге
 
             .section-ui
@@ -16,6 +16,8 @@ block content
                     
             pre.
                 +cardBlog('../img/blog/ui-blog-preview.jpg', 'Поездка в New York пример длинного названия поста...', '#')
+                        
+
             br
             .title-4 Карточка - Пост в Портфолио
             
@@ -24,3 +26,22 @@ block content
                     
             pre.
                 +cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#')
+                
+            br
+            .title mixins/_cards.pug
+            
+            pre.
+            
+                mixin cardBlog(img, title, link)
+                    .card.card__plate-blog
+                        .card__img-blog.mb-15
+                            img(src=img)
+                    .card__title-blog.mb-15 #{'#{title}'}
+                        +button('Читать', link)
+        
+                mixin cardPortfolio(img, title, link)
+                    .card.card__plate-portfolio
+                        .card__img-portfolio.mb-15
+                            img(src=img)
+                        .card__title-portfolio.mb-20 #{'#{title}'}
+                        +button('Смотреть кейс', link)
