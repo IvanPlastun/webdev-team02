@@ -1,6 +1,5 @@
 @color-admin-name: #383737;
 @color-admin-nav: #222222;
-@boldFont: 'Open Sans Extrabold';
 
 .header-admin {
 	color: #000000;
@@ -14,6 +13,7 @@
 
 .header-admin__left {
 	display: flex;
+	height: 100%;
 }
 
 .user {
@@ -23,23 +23,22 @@
 
 .brif {
 	height: 100%;
+	width: 182px;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	padding-bottom: 10px;
+
 	& p {
-		margin-bottom: 7px;
+		margin-bottom: 6px;
 		color: @color-admin-name;
 		line-height: 1;
 	}
 }
 
 .brif__name {
-	font-family: @boldFont;
+	font-family: @baseFont;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 800;
 	letter-spacing: 0.32px;
-	margin-top: 15px;
 }
 
 .admin-nav {
