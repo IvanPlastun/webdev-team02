@@ -19,7 +19,7 @@ block content
                         
 
             br
-            .title-4 Карточка - Пост в Портфолио
+            .title-4 Карточка - Работа в Портфолио
             
             .section-ui
                 +cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#')
@@ -33,15 +33,15 @@ block content
             pre.
             
                 mixin cardBlog(img, title, link)
-                    .card.card__plate-blog
+                    .card__plate
                         .card__img-blog.mb-15
                             img(src=img)
-                    .card__title-blog.mb-15 #{'#{title}'}
-                        +button('Читать', link)
+                        .card__title-blog.mb-15 #{'#{title}'}
+                        +button('Читать', '#', 'primary')
         
                 mixin cardPortfolio(img, title, link)
-                    .card.card__plate-portfolio
+                    .card__plate
                         .card__img-portfolio.mb-15
                             img(src=img)
                         .card__title-portfolio.mb-20 #{'#{title}'}
-                        +button('Смотреть кейс', link)
+                        +button('Смотреть кейс', '#', 'primary')
