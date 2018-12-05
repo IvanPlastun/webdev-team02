@@ -21,13 +21,16 @@
 	align-items: center;
 }
 
+.avatar-link {
+	display: block;
+}
+
 .brif {
 	height: 100%;
-	flex-direction: column;
-	justify-content: center;
 
 	& p {
 		margin-bottom: 6px;
+		margin-top: 15px;
 		color: @color-admin-name;
 		line-height: 1;
 	}
@@ -61,8 +64,11 @@
 	}
 }
 
+.header-admin__right {
+	margin-right: 50px;
+}
+
 .header-admin__right a {
 	color: @color-admin-nav;
 	text-decoration: none;
-	margin-right: 50px;
 }

@@ -20,11 +20,12 @@ block content
 				.header-admin
 					.header-admin__left 			
 						.user.ml-20
-							+avatar('avatar.jpg', 'alt text avatar', 'small')
+							a.avatar-link(href="#!")
+								+avatar('avatar.jpg', 'alt text avatar', 'small')
 							.brif.ml-20
 								p.brif__name Юрий Ключевский
 								+badge('Администратор')
-						.admin-nav.ml-70
+						nav.admin-nav.ml-70
 							a(href="#!")
 								i.fas.fa-plus-circle
 								|  Пост
