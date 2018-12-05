@@ -10,14 +10,17 @@
     box-shadow: @shadow;
     padding: 20px;
     flex-direction: column;
-}
-
-.card {
     display: flex;
 }
 
 .card-box {
     width: 360px;
+    height: 308px;
+    justify-content: space-between;    
+}
+
+.card-box--height {
+    height: 315px;
 }
 
 .card > .title-1,
@@ -29,18 +32,13 @@
     margin-top: 0;
 }
 
-.card-box__title-blog, 
-.card-box__title-portfolio {
+.card-box__title {
     font-size: 22px;
     font-family: @baseFont;
     font-weight: 600;
     color: #222222;
     line-height: 1.273;
     text-align: left;
-}
-
-.card-box__title-blog {
-    height: 50px;
     word-break: break-word;
 }
 
@@ -55,4 +53,8 @@
     height: 190px;
     overflow: hidden;
     margin: -20px -20px 0 -20px;
+}
+
+.card-box--button {
+    align-self: flex-start;
 }

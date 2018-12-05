@@ -1,14 +1,14 @@
 mixin cardBlog(img, title, link)
         .card-box
-            .card-box__img-blog.mb-15
+            .card-box__img-blog
                 img(src=img)
-            .card-box__title-blog.mb-15 #{title}
-            +button('Читать', '#', 'primary')
+            .card-box__title #{title}
+            +button('Читать', '#', 'primary')(class="card-box--button")
         
 mixin cardPortfolio(img, title, link)
-        .card-box
-            .card-box__img-portfolio.mb-15
+        .card-box.card-box--height
+            .card-box__img-portfolio
                 img(src=img)
-            .card-box__title-portfolio.mb-20 #{title}
-            +button('Смотреть кейс', '#', 'primary')
+            .card-box__title #{title}
+            +button('Смотреть кейс', '#', 'primary')(class="card-box--button")
         
