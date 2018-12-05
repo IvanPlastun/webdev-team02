@@ -3,7 +3,7 @@
 @background: #fff;
 
 .card,
-.card__plate {
+.card-box {
     border: none;
     border-radius: @radius;
     background-color: @background;
@@ -16,7 +16,7 @@
     display: flex;
 }
 
-.card__plate {
+.card-box {
     width: 360px;
 }
 
@@ -29,8 +29,8 @@
     margin-top: 0;
 }
 
-.card__title-blog, 
-.card__title-portfolio {
+.card-box__title-blog, 
+.card-box__title-portfolio {
     font-size: 22px;
     font-family: @baseFont;
     font-weight: 600;
@@ -39,18 +39,17 @@
     text-align: left;
 }
 
-.card__title-blog {
+.card-box__title-blog {
     height: 50px;
-    overflow: hidden;
 }
 
-.card__img-blog {
+.card-box__img-blog {
     width: 320px;
     height: 140px;
     overflow: hidden;
 }
 
-.card__img-portfolio {
+.card-box__img-portfolio {
     width: 360px;
     height: 190px;
     overflow: hidden;

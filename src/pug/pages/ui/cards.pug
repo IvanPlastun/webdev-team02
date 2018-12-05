@@ -33,15 +33,15 @@ block content
             pre.
             
                 mixin cardBlog(img, title, link)
-                    .card__plate
-                        .card__img-blog.mb-15
+                    .card-box
+                        .card-box__img-blog.mb-15
                             img(src=img)
-                        .card__title-blog.mb-15 #{'#{title}'}
+                        .card-box__title-blog.mb-15 #{'#{title}'}
                         +button('Читать', '#', 'primary')
         
                 mixin cardPortfolio(img, title, link)
-                    .card__plate
-                        .card__img-portfolio.mb-15
+                    .card-box
+                        .card-box__img-portfolio.mb-15
                             img(src=img)
-                        .card__title-portfolio.mb-20 #{'#{title}'}
+                        .card-box__title-portfolio.mb-20 #{'#{title}'}
                         +button('Смотреть кейс', '#', 'primary')
