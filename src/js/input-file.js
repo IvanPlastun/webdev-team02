@@ -13,9 +13,11 @@
 			var fileName = '',
 				desctiprionFiles = '',
 				numberOfFiles = this.files.length,
+				remainSot = Math.floor(numberOfFiles / 100) % 10,
+				remainDec = Math.floor(numberOfFiles / 10) % 10,
 				remain = numberOfFiles % 10;
 
-			if( this.files && numberOfFiles > 1 ) { 
+			if(this.files && numberOfFiles > 1) { 
 				if(numberOfFiles < 10) {
 					switch(remain) {
 						case 2:
@@ -43,7 +45,7 @@
 							desctiprionFiles = ' файлов выбрано';
 						break;
 					}
-				} else if(numberOfFiles >= 10 && numberOfFiles < 20) {
+				} else if((numberOfFiles >= 10 && numberOfFiles < 20) || (remainSot >= 1 && remainDec == 1 && remain >= 0)) {
 					switch(remain) {
 						case 0 :
 							desctiprionFiles = ' файлов выбрано';
@@ -82,7 +84,7 @@
 							desctiprionFiles = ' файлов выбрано';
 						break;
 						case 1:
-							desctiprionFiles = ' файл выбрано';
+							desctiprionFiles = ' файл выбран';
 						break;
 						case 2:
 							desctiprionFiles = ' файла выбрано';
