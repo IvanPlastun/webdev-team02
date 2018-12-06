@@ -16,8 +16,8 @@ block content
         .title-2 Код секции без изображения
         pre.
             section.upload-file
-                h6.upload__title Фотография
-                p.upload__description Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+                h6.upload-file__title Фотография
+                p.upload-file__description Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
                 +file('Выбрать файл','Файл не выбран','upload-file','upload-file', true)
         .section-ui
             include ../../sections/upload-file-with-img.pug
@@ -27,8 +27,8 @@ block content
         .title-2 Код секции с изображением
         pre.
             section.upload-file
-                h6.upload__title Изображение
-                p.upload__description Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+                h6.upload-file__title Изображение
+                p.upload-file__description Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
                 .upload-file-input-file
                     +file('Выбрать файл','Файл не выбран','upload-file-1','upload-file-1', false)
                 .upload-file-image-box
