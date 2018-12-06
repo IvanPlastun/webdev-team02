@@ -51,27 +51,27 @@ block content
 					if type == 'success'
 						if block
 							.notification
-								.notification__title.notification--success.notification--with-description #{title}
+								.notification__title.notification--success.notification--with-description #{'#{title'}}
 								.notification__description
 									block
 						else
 							.notification
-								.notification__title.notification--success #{title}
+								.notification__title.notification--success #{'#{title'}}
 					else if type == 'error'
 						if block
 							.notification
-								.notification__title.notification--error.notification--with-description #{title}
+								.notification__title.notification--error.notification--with-description #{'#{title'}}
 								.notification__description
 									block
 						else
 							.notification
-								.notification__title.notification--error #{title}
+								.notification__title.notification--error #{'#{title'}}
 					else
 						if block
 							.notification
-								.notification__title.notification--with-description #{title}
+								.notification__title.notification--with-description #{'#{title'}}
 								.notification__description
 									block
 						else
 							.notification
-								.notification__title #{title}
+								.notification__title #{'#{title'}}
