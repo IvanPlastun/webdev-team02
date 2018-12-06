@@ -1,4 +1,9 @@
-mixin icon-font(link, name)
-	a(href= link)
-		span.social-icon
-			i(class= name)
+mixin icon-font(name, link)
+	if link
+		a(href= link, target="_blank")
+			span.social-icon
+				i(class= name)
+	else
+		a(href="#!", target="_blank")
+			span.social-icon
+				i(class= name)
