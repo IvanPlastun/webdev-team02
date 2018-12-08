@@ -14,6 +14,8 @@
 
 .message-user-title{
   margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700 !important;
 }
 .message-user-info {
   line-height: @LineHeightMin;
@@ -22,6 +24,7 @@
 
 .message-user-info__name {
   font-size: 20px;
+  font-weight: 700;
 }
 .message-info-files {
   color: @textColor;
@@ -29,14 +32,23 @@
 .message-user-info__email {
   color: @blue;
   line-height: @LineHeightBase;
-  text-decoration: underline;
+  text-decoration: none;
   display: inline;
+    &:hover {
+      color: @blueHover
+    }
 }
+   
 .message-user-info-files__link {
-
+  text-decoration: underline;
+  font-weight: 400;
+    &:hover {
+      color: @blueHover
+    }
 }
 .message-user__text {
-  margin: 0;
+  margin: 20px 0 25px 0 !important;
+  line-height: 1.5 !important;
 }
 
 
