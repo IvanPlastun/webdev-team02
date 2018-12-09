@@ -1,0 +1,10 @@
+mixin header-user-block()
+	.user-block__wrapper
+		.row.user-group
+			+avatar('avatar.jpg', 'alt text avatar', 'small')
+			.user-name
+				+header-user-name('Михаил', 'Кожан')
+				+header-user-group('Пользователь')
+				.row.user-buttons
+					+button('Профиль', '#', 'profile')
+					+button('Выход', '#', 'profile')
