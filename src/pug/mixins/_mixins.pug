@@ -1,4 +1,10 @@
 //- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
 
-mixin link(url, text)
+mixin link(text,url)
     a(href= url class="link") #{text}
+
+mixin postLink(text, link)
+    a(href=link)&attributes(attributes) #{text}
+
+mixin blogImg(img,alt)
+    img(src="../../img/blog/post-img.jpg", altText = alt || '', alt=alt)
