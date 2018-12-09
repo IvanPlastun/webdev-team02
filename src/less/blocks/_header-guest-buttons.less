@@ -1,4 +1,4 @@
-.button-registration, .button-entry {
+.nav__link {
 	font-family: @baseFont;
 	font-size: 16px;
 	color: @white;
@@ -6,6 +6,14 @@
 	text-decoration: underline;
 	&:hover {
 		text-decoration: none;
+	}
+}
+.user-block {
+	.nav__link {
+		margin-right: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 }
 .button-registration {

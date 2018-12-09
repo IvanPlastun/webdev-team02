@@ -1,8 +1,9 @@
-.header
+header.header
 	.row.header__wrapper
 		include ./logo.pug
 		.user-block.nav-dawn
-			+buttons-guest('Зарегистрироваться', 'Войти')
+			+nav-link('Регистрация', '#!')
+			+nav-link('Вход', '#!')
 	.row
 		include ./navigation.pug
 
