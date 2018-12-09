@@ -1,0 +1,28 @@
+.header-admin
+	.header-admin__left 			
+		.user.ml-20
+			a.avatar-link(href="#!")
+				+avatar('avatar.jpg', 'alt text avatar', 'small')
+			.brif.ml-20
+				p.brif__name Юрий Ключевский
+				+badge('Администратор')
+		nav.admin-nav.ml-70
+			a(href="#!")
+				i.fas.fa-plus-circle
+				|Пост
+			a(href="#!")
+				i.fas.fa-plus-circle
+				|Работа
+			a(href="#!")
+				i.fas.fa-edit
+				|Обо мне
+			a(href="#!")
+				i.fas.fa-edit
+				|Контакты
+			a(href="#!")
+				i.fas.fa-envelope
+				|Сообщения
+	.header-admin__right
+		a(href="#!")
+			i.fas.fa-sign-out-alt
+			|Выход
