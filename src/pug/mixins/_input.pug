@@ -1,3 +1,4 @@
-mixin input(name,type,placeholder,labelText)
-	label.label(for="input-robe") #{labelText}
-	input.input#input-robe(name=name type=type placeholder=placeholder)
+mixin input(name,type,placeholder,id,labelText)
+	- id = id || ""
+	label.label(for=id) #{labelText}
+	input.input(name=name id=id type=type placeholder=placeholder)&attributes(attributes)
