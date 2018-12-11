@@ -1,0 +1,46 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Главная';
+	- var pageClass = 'content-page';
+
+block content
+	.sticky-footer-wrapper
+		include ../sections/header-admin.pug
+		include ../sections/header-guest.pug
+		.sticky-footer-content
+			.container.contacts-edit
+				.contacts-edit__title
+					h1.title-1.contacts-edit__title Редактировать данные
+				.contacts-edit__form
+					.row.mb-30
+						.col-md-3
+							+input('first-name','text','Введите имя','Имя')
+						.col-md-3
+							+input('last-name','text','Введите фамилию','Фамилия')
+					.row.mb-30
+						.col-md-3
+							+input('email','text','Введите email','Email')
+						.col-md-3
+							+input('skype','text','Введите skype','Skype')
+					.row.mb-30
+						.col-md-3
+							+input('vkontakte','text','Введите ссылку на профиль','Вконтакте')
+						.col-md-3
+							+input('facebook','text','Введите ссылку на профиль','Facebook')
+						.col-md-3
+							+input('github','text','Введите ссылку на профиль','Github')
+						.col-md-3
+							+input('twitter','text','Введите ссылку на профиль','Twitter')
+					.row.mb-30
+						.col-md-3
+							+input('phone','text','Введите телефон','Телефон')
+						.col-md-3
+							+input('address','text','Введите адрес','Адрес')
+					.row
+						.contacts-edit__form-button--save
+							+buttonSubmit('Сохранить', 'save-button', 'save')
+						.contacts-edit__form-button--cancel
+							+button('Отмена', '#', 'primary')
+
+		include ../sections/footer.pug
