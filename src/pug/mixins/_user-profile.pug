@@ -5,8 +5,9 @@ mixin profileDescription (title, description)
 mixin profileComment(articleTitle, date)
     .user-comment
         .user-comment-profile
-            span.user-comment__article-title #{articleTitle}
-            span.user-comment__date--profile
+            a(href="#!", target="_blank")
+                span.user-comment__article-title #{articleTitle}
+            span.user-comment__date
                 i(class="far fa-clock")
                 | #{date}
             .user-comment__text--profile

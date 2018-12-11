@@ -1,31 +1,30 @@
 .user-profile-block {
-    display: flex;
+    position: relative;
     justify-content: space-between;
 }
 
-.user-profile__title {
+.user-profile-title {
     margin: 0;
     color: @headerText;
+    font-weight: 700;
 }
 
 .user-profile__button {
-    margin-right: -110px;
+    position: absolute;
+    right: -110px;
 }
 
-.user-profile-block--information {
+.user-profile-information {
     display: flex;
-    padding-top: 30px;
-    padding-bottom: 40px;
 }
 
 .user-profile__description {
-    padding-left: 50px;
-    margin-bottom: 20px;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
 
     p {
-        margin: 12px 0 0;
+        margin: 10px 0 0;
     }
 
     span {
@@ -40,31 +39,30 @@
     }
 }
 
-.user-profile__title--comments {
+.user-profile-text {
     color: @textContent;
     margin: 0;
-    line-height: 1;
+    font-weight: 700;
 }
 
-.user-profile-block--comments {
-    padding-top: 25px;
-    padding-bottom: 40px;
+.user-profile-comments {
+    .user-comment {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.user-comment-profile {
+    a {
+        text-decoration: none;
+    }
 }
 
 .user-comment__article-title {
     font-size: 16px;
     color: @blue;
-    margin-right: 30px; 
-}
-
-.user-comment__date--profile {
-	color: #9b9b9b;
-	font-size: 14px;
-	font-weight: 600;
-	
-	.fa-clock {
-		margin-right: 30px;
-	}
+    margin-right: 20px;
 }
 
 .user-comment__text--profile {

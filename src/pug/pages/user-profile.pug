@@ -12,11 +12,11 @@ block content
                 .row
                     .col-10.offset-1
                         .user-profile-block
-                            .title-1.user-profile__title Профиль
+                            h1.user-profile-title Профиль
                             .user-profile__button
                                 +button('Редактировать', '#', 'edit')
                                 
-                        .user-profile-block--information
+                        .user-profile-information.mb-40.mt-40
                             .user-profile__avatar
                                 +avatar('avatar.jpg', 'alt text avatar')
                             .user-profile__description
@@ -24,9 +24,9 @@ block content
                                 +profileDescription ('Email', 'pilat@mail.ru')
                                 +profileDescription ('Страна, Город', 'Россия, Казань')
                                 
-                        .title-2.user-profile__title--comments Комментарии пользователя
+                        h2.user-profile-text.mb-25 Комментарии пользователя
                         
-                        .user-profile-block--comments
+                        .user-profile-comments
                             +profileComment('Поездка в LA', '05 Мая 2017 года в 15:45')
                                 p.
                                     Замечательный парк, обязательно отправлюсь туда этим летом. 
