@@ -7,33 +7,33 @@ block variables
 block content
 	include ../sections/header-admin.pug
 	include ../sections/header-guest.pug
-	.container.pb-70.pt-70.pl-0.pr-0
-		.works-title.mb-30
+	.container.pb-120.pt-70.pl-0.pr-0
+		.works-title.mb-35
 			.works-title-left
-				h1.works-title-text 
+				h1.works-title-text
 					span.works-span Работы
 					|, которые сделал я и моя команда
 			.works-title-right
 				+button('Добавить работу', '#!', 'edit')
-		.row.ml-0.mr-0
-			.col-auto.pl-0
+		.row.ml-0.mr-0.mb-50
+			.col-auto.pl-0.pr-0.mr-30
 				+cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#!')
-			.col-auto
+			.col-auto.pl-0.pr-0.mr-30
 				+cardPortfolio('../img/blog/works-UI-Kit.jpg', 'Верстка UI набора', '#!')
-			.col-auto.pr-0
+			.col-auto.pr-0.pl-0
+				+cardPortfolio('../img/blog/works-shop.jpg', 'Верстка интернет магазина', '#!')
+		.row.ml-0.mr-0.mb-50
+			.col-auto.pl-0.pr-0.mr-30
+				+cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#!')
+			.col-auto.pl-0.pr-0.mr-30
+				+cardPortfolio('../img/blog/works-UI-Kit.jpg', 'Верстка UI набора', '#!')
+			.col-auto.pr-0.pl-0
 				+cardPortfolio('../img/blog/works-shop.jpg', 'Верстка интернет магазина', '#!')
 		.row.ml-0.mr-0
-			.col-auto.pl-0
+			.col-auto.pl-0.pr-0.mr-30
 				+cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#!')
-			.col-auto
+			.col-auto.pl-0.pr-0.mr-30
 				+cardPortfolio('../img/blog/works-UI-Kit.jpg', 'Верстка UI набора', '#!')
-			.col-auto.pr-0
-				+cardPortfolio('../img/blog/works-shop.jpg', 'Верстка интернет магазина', '#!')
-		.row.ml-0.mr-0
-			.col-auto.pl-0
-				+cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#!')
-			.col-auto
-				+cardPortfolio('../img/blog/works-UI-Kit.jpg', 'Верстка UI набора', '#!')
-			.col-auto.pr-0
+			.col-auto.pr-0.pl-0
 				+cardPortfolio('../img/blog/works-shop.jpg', 'Верстка интернет магазина', '#!')
 	include ../sections/footer.pug
