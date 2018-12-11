@@ -1,0 +1,13 @@
+mixin profileDescription (title, description)
+    span #{title}
+    p #{description}
+    
+mixin profileComment(articleTitle, date)
+    .user-comment
+        .user-comment-profile
+            span.user-comment__article-title #{articleTitle}
+            span.user-comment__date--profile
+                i(class="far fa-clock")
+                | #{date}
+            .user-comment__text--profile
+                block
