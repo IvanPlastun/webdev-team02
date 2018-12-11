@@ -19,17 +19,17 @@ block content
                             .row
                                 .col-md-10.offset-md-1
                                     
-                                    .title-1 Редактировать - Обо Мне
+                                    h1.title-1.about-me-edit__title Редактировать - Обо Мне
                                     
                                     .edit-name
                                         +input('name','text','Введите имя и фамилию','Имя, фамилия')
                                         
-                                    .upload-photo
+                                    .upload-photo.mb-35
                                         .upload-photo__title Фотография
                                         .upload-photo__description Изображение jpg или png, рекомендуемый размер 205px на 205px, вес до 2Мб.
                                         +file('Выбрать файл', 'Файл не выбран', 'fileUpload','fileUpload',false)
                                         .upload-photo__result
-                                            img(src="../../../img/avatars/avatar.jpg" alt="user-photo")
+                                            img(src="../../img/avatars/avatar.jpg" alt="user-photo")
                                     
                                     .edit-information
                                         +textarea('about-me-info','Напишите информацию о себе','','Информация на главной')(class="edit-information__textarea")
@@ -59,12 +59,12 @@ block content
                                 .row
                                     .col-md-10.offset-md-1
                                         
-                                        .title-1 Редактировать - Обо Мне
+                                        h1.title-1.about-me-edit__title Редактировать - Обо Мне
                                         
                                         .edit-name
                                             +input('name','text','Введите имя и фамилию','Имя, фамилия')
                                             
-                                        .upload-photo
+                                        .upload-photo.mb-35
                                             .upload-photo__title Фотография
                                             .upload-photo__description Изображение jpg или png, рекомендуемый размер 205px на 205px, вес до 2Мб.
                                             +file('Выбрать файл', 'Файл не выбран', 'fileUpload','fileUpload',false)
