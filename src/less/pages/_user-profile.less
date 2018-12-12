@@ -1,6 +1,10 @@
+.content--padding {
+	padding-top: 80px;
+	padding-bottom: 120px;
+}
+
 .user-profile-block {
     position: relative;
-    justify-content: space-between;
 }
 
 .user-profile-title {
@@ -12,6 +16,7 @@
 .user-profile__button {
     position: absolute;
     right: -110px;
+    top: 0;
 }
 
 .user-profile-information {
@@ -42,7 +47,7 @@
 .user-profile-text {
     color: @textContent;
     margin: 0;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .user-profile-comments {
@@ -56,6 +61,10 @@
 .user-comment-profile {
     a {
         text-decoration: none;
+        
+        :hover {
+            color: @blueHover;
+        }
     }
 }
 
