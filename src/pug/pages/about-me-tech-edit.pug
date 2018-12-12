@@ -1,0 +1,62 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Редактировать - Технологии';
+	- var pageClass = 'content-page';
+
+block content
+	include ../sections/header-admin.pug
+	include ../sections/header-user.pug
+
+	.content-exp-page
+		.container
+			.row
+				.col-md-9.offset-md-1
+					h1.title-1.mt-0.mb-35 Редактировать - Технологии
+					form
+						.row
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('html5','text','0','HTML5')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('css3','text','0','CSS3')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('js','text','0','JS')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('jquery','text','0','jQuery')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('php','text','0','PHP')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('mysql','text','0','MySql')
+									p.percent %
+							.w-100
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('git','text','0','Git')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('gulp','text','0','Gulp')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('bower','text','0','Bower')
+									p.percent %
+							.col-md-3
+								.about-me-tech__input.mb-40
+									+input('webpack','text','0','WebPack')
+									p.percent %
+						+buttonSubmit('Сохранить', 'save-button', 'save')(class="mr-20")
+						+button('Отмена', '#', 'primary')
+
+	include ../sections/footer.pug
