@@ -17,7 +17,7 @@ block content
 					.container
 						.row.justify-content-center
 							.col-md-10
-								h1.title-1 Редактировать - Опыт работы
+								h1.title-1.mt-0.mb-35 Редактировать - Опыт работы
 								+previousJob(
 									'Февраль 2017 - по настоящее время',
 									'Frontend разработчик, Вконтактe, mail.ru group'
@@ -30,7 +30,7 @@ block content
 								)
 									p.about-me-job__text.
 										Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
-								h3.title-3 Добавить новое место
+								h3.title-3.mt-0.mb-35 Добавить новое место
 								.about-me-edit-form
 									+input('date','text','Введите даты начала и окончания работы','Период')
 									+input('job-name','text','Введите название должности','Название должности')
@@ -45,7 +45,7 @@ block content
 					.container
 						.row.justify-content-center
 							.col-md-10
-								h1.title-1 Редактировать - Опыт работы
+								h1.title-1.mt-0.mb-35 Редактировать - Опыт работы
 								+previousJob(
 									'Февраль 2017 - по настоящее время',
 									'Frontend разработчик, Вконтактe, mail.ru group'
@@ -58,7 +58,7 @@ block content
 								)
 									p.about-me-job__text.
 										Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
-								h3.title-3 Добавить новое место
+								h3.title-3.mt-0.mb-35 Добавить новое место
 								.about-me-edit-form
 									+input('date','text','Введите даты начала и окончания работы','Период')
 									+input('job-name','text','Введите название должности','Название должности')
@@ -70,7 +70,7 @@ block content
 			.title mixins/about-me.pug
 			pre.
 				mixin previousJob(date, title)
-					.message-user.mb-30
+					.message-user.mb-20
 						+button('Удалить', '#', 'delete').float-right
 						.message-user__date.mb-20 \#{date}
 						.message-user-info
