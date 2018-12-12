@@ -16,12 +16,16 @@ block content
 				.card.align-items-center.pb-35
 					.title-2 Главная страница
 					+button("Перейти", "main.html",'primary')
-
-		.row.mt-30
+    .row.mt-30
+      .col
+          .card.align-items-center.pb-35
+              .title-2 Обо мне редактировать – Информация
+              +button("Перейти", "/about-me-edit-information.html",'primary')
 			.col
 				.card.align-items-center.pb-35
 					.title-2 Редактировать - Опыт работы
 					+button("Перейти", "about-me-work-edit.html",'primary')
+    .row.mt-30
 			.col
 				.card.align-items-center.pb-35
 					.title-2 Работы
@@ -30,6 +34,7 @@ block content
 				.card.align-items-center.pb-35
 					.title-2 Профиль пользователя
 					+button("Перейти", "user-profile.html",'primary')
+    .row.mt-30
 			.col
 				.card.align-items-center.pb-35
 					.title-2 Контакты - редактировать
