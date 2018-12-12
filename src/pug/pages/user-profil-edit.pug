@@ -1,0 +1,34 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Профиль пользователя - редактировать';
+	- var pageClass = 'content-page';
+
+block content
+	include ../sections/header-user.pug
+	.container.pb-120.pt-80.pl-0.pr-0
+		.row
+			.col-10.offset-1
+				h1.user-edit-title Редактировать профиль
+				.user-edit-wrapper
+					.user-edit-name.mt-35
+						+input('name','text','Введите имя',userEditName,'Имя')
+					.user-edit-fam.mt-30
+						+input('name','text','Введите фамилию',userEditFam,'Фамилия')
+					.user-edit-email.mt-30
+						+input('name','email','Введите email',userEditEmail,'Email')
+				.user-edit-foto.mt-30
+					h3 Фотография
+					p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+					+file('Выбрать файл', 'Файл не выбран', 'fileUpload','fileUpload',false)
+				.user-edit-wrapper
+					.user-edit-land.mt-30
+						+input('name','text','Введите страну',userEditLand,'Страна')
+					.user-edit-city.mt-30
+						+input('name','text','Введите город',userEditCity,'Город')
+					.user-edit-buttons.mt-30
+						.user-edit-buttons--left
+							+buttonSubmit('Сохранить', 'save-button', 'save')
+						.user-edit-buttons--right
+							+button('Отмена', '#!', 'primary')
+	include ../sections/footer.pug
