@@ -1,5 +1,4 @@
 //- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
-
 mixin link(text,url)
     a(href= url class="link") #{text}
 
@@ -8,3 +7,5 @@ mixin postLink(text, link)
 
 mixin blogImg(img,alt)
     img(src="../../img/blog/post-img.jpg", altText = alt || '', alt=alt)
+mixin horisontal-line()
+ .line
