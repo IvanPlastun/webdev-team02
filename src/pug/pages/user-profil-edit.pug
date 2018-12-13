@@ -10,23 +10,22 @@ block content
 		.row
 			.col-10.offset-1
 				h1.user-edit-title Редактировать профиль
-				.user-edit-wrapper
-					.user-edit-name.mt-35
-						+input('name','text','Введите имя','userEditName','Имя')
-					.user-edit-lastname.mt-30
-						+input('name','text','Введите фамилию','userEditLastname','Фамилия')
-					.user-edit-email.mt-30
-						+input('name','email','Введите email','userEditEmail','Email')
-				.user-edit-foto.mt-30
-					h6 Фотография
-					p Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
-					+file('Выбрать файл', 'Файл не выбран', 'fileUpload','fileUpload',false)
-				.user-edit-wrapper
-					.user-edit-land.mt-30
-						+input('name','text','Введите страну','userEditLand','Страна')
-					.user-edit-city.mt-30
-						+input('name','text','Введите город','userEditCity','Город')
-					.user-edit-buttons.mt-30
-							+buttonSubmit('Сохранить', 'save-button', 'save')
-							+button('Отмена', '#!', 'primary')
+				form
+					.user-edit-wrapper.mt-35
+						.user-edit-name
+							+input('name','text','Введите имя','userEditName','Имя')
+						.user-edit-lastname.mt-30
+							+input('name','text','Введите фамилию','userEditLastname','Фамилия')
+						.user-edit-email.mt-30
+							+input('name','email','Введите email','userEditEmail','Email')
+					.user-edit-foto.mt-30
+						include ../sections/upload-file-no-img.pug
+					.user-edit-wrapper
+						.user-edit-land.mt-30
+							+input('name','text','Введите страну','userEditLand','Страна')
+						.user-edit-city.mt-30
+							+input('name','text','Введите город','userEditCity','Город')
+						.user-edit-buttons.mt-30
+								+buttonSubmit('Сохранить', 'save-button', 'save')
+								+button('Отмена', '#!', 'primary')
 	include ../sections/footer.pug
