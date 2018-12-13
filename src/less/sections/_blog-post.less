@@ -36,15 +36,29 @@
         font-weight: 600;
     }
 }
-    
-    
+.post-head{
+    position: relative;
+}
+
+.post-head--position{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 p.post-content__text{
     color: @textContent;
     font-size: 16px;
     margin: 0;
     margin-bottom: 20px;
+    line-height: 2em;
     &:last-child{
             margin-bottom: 0px;
     }
         
+}
+
+.post-buttons-nav{
+    display: flex;
+    justify-content: space-between;
 }
