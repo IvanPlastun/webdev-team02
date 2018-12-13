@@ -1,0 +1,37 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+    - var title = 'Контакты - Сообщения';
+    - var pageClass = 'content-page';
+
+block content
+    .sticky-footer-wrapper
+        include ../sections/header-admin.pug
+        include ../sections/header-user.pug
+        .sticky-footer-content
+            .container.content--padding
+                .row
+                    .col-10.offset-1
+                        h1.contacts-messages-title Сообщения от посетителей
+                        .visitor-messages-block.mt-30
+                            .message-user
+                                +button('Удалить', '#', 'delete').float-right
+                                .message-user__date.mb-20 22 Августа 2017
+                                .message-user-info
+                                    span.message-user-info__name.strong Джон До
+                                    a.message-user-info__email.ml-20 johndoe@gmail.com
+                                p.message-user__text Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронтэнд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.
+                                span.message-info-files.strong Прикрепленные файлы:
+                                    a.message-user-info-files__link Avrora-platform.pdf
+                            .message-user
+                                +button('Удалить', '#', 'delete').float-right
+                                .message-user__date.mb-20 22 Августа 2017
+                                .message-user-info
+                                    span.message-user-info__name.strong Джон До
+                                    a.message-user-info__email.ml-20 johndoe@gmail.com
+                                p.message-user__text Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронтэнд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.
+                                span.message-info-files.strong Прикрепленные файлы:
+                                    a.message-user-info-files__link Avrora-platform.pdf
+
+
+        include ../sections/footer.pug

@@ -1,41 +1,45 @@
 extends ../layouts/page-layout/page.pug
 
 block variables
-	- var title = 'Главная страница';
-	- var pageClass= "index-page";
+    - var title = 'Главная страница';
+    - var pageClass= "index-page";
 
 block content
-	.container
-		.title-1.text-center.mb-55 Проект команды WEBDEV-TEAM 05
-		.row
-			.col
-				.card.align-items-center.pb-35
-					.title-2 UI-Kit
-					+button("Перейти", "ui/ui-kit.html", 'primary')
-			.col
-				.card.align-items-center.pb-35
-					.title-2 Главная страница
-					+button("Перейти", "main.html",'primary')
-    .row.mt-30
-      .col
-          .card.align-items-center.pb-35
-              .title-2 Обо мне редактировать – Информация
-              +button("Перейти", "/about-me-edit-information.html",'primary')
-			.col
-				.card.align-items-center.pb-35
-					.title-2 Редактировать - Опыт работы
-					+button("Перейти", "about-me-work-edit.html",'primary')
-    .row.mt-30
-			.col
-				.card.align-items-center.pb-35
-					.title-2 Работы
-					+button("Перейти", "works.html", 'primary')
-			.col
-				.card.align-items-center.pb-35
-					.title-2 Профиль пользователя
-					+button("Перейти", "user-profile.html",'primary')
-    .row.mt-30
-			.col
-				.card.align-items-center.pb-35
-					.title-2 Контакты - редактировать
-					+button("Перейти", "contacts-edit.html", 'primary')
+    .container
+        .title-1.text-center.mb-55 Проект команды WEBDEV-TEAM 05
+        .row
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 UI-Kit
+                    +button("Перейти", "ui/ui-kit.html", 'primary')
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 Главная страница
+                    +button("Перейти", "main.html",'primary')
+        .row.mt-30
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 Обо мне редактировать – Информация
+                    +button("Перейти", "/about-me-edit-information.html",'primary')
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 Редактировать - Опыт работы
+                    +button("Перейти", "about-me-work-edit.html",'primary')
+        .row.mt-30
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 Работы
+                    +button("Перейти", "works.html", 'primary')
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 Профиль пользователя
+                    +button("Перейти", "user-profile.html",'primary')
+        .row.mt-30
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 Контакты - редактировать
+                    +button("Перейти", "contacts-edit.html", 'primary')
+            .col
+                .card.align-items-center.pb-35
+                    .title-2 Контакты - Сообщения
+                    +button("Перейти", "contacts-messages.html", 'primary')
