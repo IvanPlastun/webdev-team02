@@ -1,0 +1,89 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Работы-добавить работу - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Работы-добавить работу
+			
+			.section-ui
+					.sticky-footer-wrapper
+						include ../../sections/header-admin.pug
+						include ../../sections/header-guest.pug
+						.sticky-footer-content
+							.container.add-works
+								.row.ml-0.mr-0
+									.col-10.offset-1.pl-0.pr-0
+										.add-works__title
+											h1.title-1.add-works__title-text Добавить работу
+										form.add-works__form
+											.add-works__form-item
+												+input('workName','text','Введите название работы',"",'Название')
+											.add-works__form-item
+												h6.upload-file__title.upload-file__title--weight Изображение
+												p.upload-file__description Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+												+file('Выбрать файл','Файл не выбран','upload-file','upload-file', true)
+											.add-works__form-item
+												+textarea('workDescription','Введите описание',"","",'Содержание')
+											.add-works__form-item
+												+textarea('workResult','Введите описание',"","",'Результат')
+											.add-works__form-item
+												+textarea('workTechnology','Введите описание',"","",'Технологии')
+											.row.ml-0.mr-0
+												.col-3.add-works__form--col
+													+input(linkProject,'text','Введите ссылку',"",'Ссылка на проект')
+												.col-3.add-works__form--col
+													+input(linkGithab,'text','Введите ссылку',"",'Ссылка на GitHub')
+											.row.ml-0.mr-0.mt-30
+												.add-works__form-button-save
+													+buttonSubmit('Сохранить', 'save-button', 'save')
+												.add-works__form-button-cancel
+													+button('Отмена', '#', 'primary')
+						include ../../sections/footer.pug
+			
+
+			.title pages/works-add-work.pug
+			pre.
+				extends ../layouts/page-layout/page.pug
+
+				block variables
+					- var title = 'Работы-добавить работу';
+					- var pageClass = 'content-page';
+
+				block content
+					.sticky-footer-wrapper
+						include ../sections/header-admin.pug
+						include ../sections/header-guest.pug
+						.sticky-footer-content
+							.container.add-works
+								.row.ml-0.mr-0
+									.col-10.offset-1.pl-0.pr-0
+										.add-works__title
+											h1.title-1.add-works__title-text Добавить работу
+										form.add-works__form
+											.add-works__form-item
+												+input('workName','text','Введите название работы',"",'Название')
+											.add-works__form-item
+												h6.upload-file__title.upload-file__title--weight Изображение
+												p.upload-file__description Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+												+file('Выбрать файл','Файл не выбран','upload-file','upload-file', true)
+											.add-works__form-item
+												+textarea('workDescription','Введите описание',"","",'Содержание')
+											.add-works__form-item
+												+textarea('workResult','Введите описание',"","",'Результат')
+											.add-works__form-item
+												+textarea('workTechnology','Введите описание',"","",'Технологии')
+											.row.ml-0.mr-0
+												.col-3.add-works__form--col
+													+input(linkProject,'text','Введите ссылку',"",'Ссылка на проект')
+												.col-3.add-works__form--col
+													+input(linkGithab,'text','Введите ссылку',"",'Ссылка на GitHub')
+											.row.ml-0.mr-0.mt-30
+												.add-works__form-button-save
+													+buttonSubmit('Сохранить', 'save-button', 'save')
+												.add-works__form-button-cancel
+													+button('Отмена', '#', 'primary')
+						include ../sections/footer.pug
