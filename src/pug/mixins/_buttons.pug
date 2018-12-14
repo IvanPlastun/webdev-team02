@@ -40,21 +40,21 @@ mixin buttonWithIcon(text, link, icon, type, iconPos)
 	if type == "next" && icon != "" && iconPos == "right"
 		a.button(href=link, class="button-next")&attributes(attributes) #{text} #[span.button__icon #[i(class="fas " + icon)]]
 	else if type == "previous" && icon != "" && iconPos == "left"
-		a.button(href=link, class="button-previous") #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="fas " + icon)]]
+		a.button(href=link, class="button-previous") #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="mr-0 fas " + icon)]]
 	else if  type == "edit" && icon != "" && iconPos == "right"
 		a.button(href=link, class="button-edit")&attributes(attributes) #{text} #[span.button__icon #[i(class="fas " + icon)]]
 	else if  type == "edit" && icon != "" && iconPos == "left"
-		a.button(href=link, class="button-edit") #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="fas " + icon)]]
+		a.button(href=link, class="button-edit") #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="mr-0 fas " + icon)]]
 	else if  type == "delete" && icon != "" && iconPos == "right"
 		a.button(href=link, class="button-delete")&attributes(attributes) #{text} #[span.button__icon #[i(class="fas " + icon)]]
 	else if  type == "delete" && icon != "" && iconPos == "left"
-		a.button(href=link, class="button-delete")&attributes(attributes) #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="fas " + icon)]]
+		a.button(href=link, class="button-delete")&attributes(attributes) #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="mr-0 fas " + icon)]]
 	else if  type == "save" && icon != "" && iconPos == "right"
 		a.button(href=link, class="button-save")&attributes(attributes) #{text} #[span.button__icon #[i(class="fas " + icon)]]
 	else if type == "save" && icon != "" && iconPos == "left"
-		a.button(href=link, class="button-save")&attributes(attributes) #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="fas " + icon)]]
+		a.button(href=link, class="button-save")&attributes(attributes) #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="mr-0 fas " + icon)]]
 	else if type == "enter" && icon != "" && iconPos == "right"
 		a.button(href=link, class="button-enter")&attributes(attributes) #{text} #[span.button__icon #[i(class="fas " + icon)]]
 	else if type == "enter" && icon != "" && iconPos == "left"
-		a.button(href=link, class="button-enter")&attributes(attributes) #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="fas " + icon)]]
+		a.button(href=link, class="button-enter")&attributes(attributes) #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="mr-0 fas " + icon)]]
 
