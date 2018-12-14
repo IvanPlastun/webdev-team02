@@ -19,7 +19,7 @@ block content
 						.user-edit-email.mt-30
 							+input('name','email','Введите email','userEditEmail','Email')
 					.user-edit-foto.mt-30
-						include ../sections/upload-file-no-img.pug
+						+upload-file-no-img("Фотография", "Изображение jpg или png, рекомендуемый размер 100x100 пикселей, и весом до 2Мб.")
 					.user-edit-wrapper.mt-30
 						.user-edit-land
 							+input('name','text','Введите страну','userEditLand','Страна')
