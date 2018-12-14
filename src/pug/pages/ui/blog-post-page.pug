@@ -1,7 +1,7 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-    - var title = 'Страница для поста с блогом - UI-kit и HTML фреймворк - Документация';
+    - var title = 'Страница поста с блогом - UI-kit и HTML фреймворк - Документация';
     - var pageClass = 'body--dashboard';
 
 block content
@@ -9,22 +9,23 @@ block content
         .container.container--left.user-content.pt-35
             h1 Страница поста в блоге
             .section-ui
-                include ../../sections/header-admin.pug
-                include ../../sections/header-guest.pug
-                .blog-post__section
-                    .blog-post__section--top
-                        +buttonSubmit('Редактировать', 'edit-button', 'edit')
-                    include ../../sections/blog-post-page.pug
-                .blog-post__section
-                    .post  
-                        .row
-                            .col-10
-                                .blog-post__section--bottom
-                                    +buttonWithIcon('Назад', '#', 'fa-arrow-left', 'previous', 'left')
-                                    +buttonWithIcon('Вперед', '#', 'fa-arrow-right', 'next', 'right')
-                                .blog-post__section--comments 
-                                    include ../../sections/user-comments.pug
-                                .blog-post__section--form
-                                    include ../../sections/comments-submit.pug
-                    .blog-post__section--footer
-                        include ../../sections/footer.pug 
+                include ../blog-post-page.pug
+            .section-ui
+                pre.
+                    include ../../sections/blog-post.pug
+                .title-2 Код страницы
+                pre.
+                    extends ../layouts/page-layout/page.pug
+
+                    block variables
+                        - var title = 'Страница поста с блогом';
+                        - var pageClass = 'content-page';
+
+                    block content
+                        include ../sections/header-admin.pug
+                        include ../sections/header-user.pug
+                        .container.pt-80.pb-120
+                            include ../sections/blog-post.pug
+                            include ../sections/user-comments.pug
+                            include ../sections/comments-submit.pug
+                        include ../sections/footer.pug
