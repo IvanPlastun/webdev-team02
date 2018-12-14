@@ -1,0 +1,104 @@
+//Установка фона
+.login {
+    background: url(/img/img-loginPage/layout-2.png),
+    url(/img/img-loginPage/layout-1.png),
+    url(/img/img-loginPage/background.jpg);
+    background-size: auto, auto, cover;
+    background-position: left top, left bottom, left top;
+    background-repeat: repeat-x, repeat-x, no-repeat;
+    height: 100vh;
+}
+
+//Выравнивание содержимого
+.login-box {
+    padding: 45px 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+//Стили для верхней части страницы
+.login-box-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-box-head-logo {
+    font-family: @baseFont;
+    color: @white;
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.login-box-head-logo-link-registration a {
+    font-family: @baseFont;
+    color:  #fefefe;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+//Стили для блока с формой входа
+.login-box-content {
+    display: flex;
+    justify-content: center;
+}
+
+.login-box-content-input {
+    background-color:  rgba(18, 45, 61, 0.6);
+    box-shadow: 5px 9px 40px 0px #63758a;
+    border-radius: 10px;
+    width: 360px;
+    padding: 40px 30px
+}
+
+.login-box-content-input__title {
+    font-family: @baseFont;
+    color: @white;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-box-content-input-form-help {
+    color:  #ffffff;
+
+    a {
+        font-family:@baseFont;
+        color:  #fefefe;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+//Стили для copyright
+.login-box-footer {
+    font-family: @baseFont;
+    color: @white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+
+    p {margin: 0;}
+
+    a {
+        color:  #ffffff;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
