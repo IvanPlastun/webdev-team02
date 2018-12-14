@@ -7,7 +7,7 @@ block variables
 block content
 	.container
 		.title-1.text-center.mb-55 Проект команды WEBDEV-TEAM 05
-		.row.mb-30
+		.row
 			.col
 				.card.align-items-center.pb-35
 					.title-2 UI-Kit
@@ -16,21 +16,34 @@ block content
 				.card.align-items-center.pb-35
 					.title-2 Главная страница
 					+button("Перейти", "main.html",'primary')
-		.row.mb-30
+		.row.mt-30
 			.col
 				.card.align-items-center.pb-35
-					.title-2 Страница Вход
-					+button("Перейти", "login.html",'primary')
-		.row.mb-30
+					.title-2 Обо мне редактировать – Информация
+					+button("Перейти", "/about-me-edit-information.html",'primary')
 			.col
 				.card.align-items-center.pb-35
 					.title-2 Редактировать - Опыт работы
 					+button("Перейти", "about-me-work-edit.html",'primary')
+		.row.mt-30
 			.col
 				.card.align-items-center.pb-35
 					.title-2 Работы
 					+button("Перейти", "works.html", 'primary')
-		.row.mb-30
+			.col
+				.card.align-items-center.pb-35
+					.title-2 Профиль пользователя
+					+button("Перейти", "user-profile.html",'primary')
+		.row.mt-30
+			.col
+				.card.align-items-center.pb-35
+					.title-2 Контакты - редактировать
+					+button("Перейти", "contacts-edit.html", 'primary')
+			.col
+				.card.align-items-center.pb-35
+					.title-2 Вход
+					+button("Перейти", "login.html", 'primary')
+		.row.mt-30
 			.col
 				.card.align-items-center.pb-35
 					.title-2 Профиль пользователя - редактировать
