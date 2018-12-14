@@ -1,18 +1,15 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Работы страница - UI-kit и HTML фреймворк - Документация';
+	- var title = 'Профиль пользователя - редактировать - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
-			h1 Работы страница
+			h1 Профиль пользователя - редактировать
 			.section-ui
 				include ../user-profil-edit.pug
-			pre.
-				../user-profil-edit.pug	
-			
 			.title pages/user-profil-edit.pug
 			pre.
 				extends ../layouts/page-layout/page.pug
@@ -43,6 +40,6 @@ block content
 										.user-edit-city.mt-30
 											+input('name','text','Введите город','userEditCity','Город')
 										.user-edit-buttons.mt-30
-												+buttonSubmit('Сохранить', 'save-button', 'save')
-												+buttonSubmit('Отмена', 'infoButton')
+											+buttonSubmit('Сохранить', 'save-button', 'save')
+											+buttonSubmit('Отмена', 'infoButton')
 					include ../sections/footer.pug
