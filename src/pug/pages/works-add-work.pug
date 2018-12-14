@@ -9,32 +9,28 @@ block content
 		include ../sections/header-admin.pug
 		include ../sections/header-guest.pug
 		.sticky-footer-content
-			.container.add-works
+			.container.add-works.pl-0.pr-0.pt-80.pb-120
 				.row.ml-0.mr-0
 					.col-10.offset-1.pl-0.pr-0
 						.add-works__title
 							h1.title-1.add-works__title-text Добавить работу
-						form.add-works__form
-							.add-works__form-item
+						form.add-works__form.mt-40
+							.add-works__form-item.mb-30
 								+input('workName','text','Введите название работы',"",'Название')
-							.add-works__form-item
-								h6.upload-file__title Изображение
-								p.upload-file__description Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
-								+file('Выбрать файл','Файл не выбран','upload-file','upload-file', true)
-							.add-works__form-item
+							.add-works__form-item.mb-30
+								+upload-file-no-img("Изображение", "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.")
+							.add-works__form-item.mb-30
 								+textarea('workDescription','Введите описание',"","",'Содержание')
-							.add-works__form-item
+							.add-works__form-item.mb-30
 								+textarea('workResult','Введите описание',"","",'Результат')
-							.add-works__form-item
+							.add-works__form-item.mb-30
 								+textarea('workTechnology','Введите описание',"","",'Технологии')
 							.row.ml-0.mr-0
-								.col-3.add-works__form--col
-									+input(linkProject,'text','Введите ссылку',"",'Ссылка на проект')
-								.col-3.add-works__form--col
-									+input(linkGithab,'text','Введите ссылку',"",'Ссылка на GitHub')
+								.col-3.no-paddings.mr-30
+									+input('linkProject','url','Введите ссылку',"",'Ссылка на проект')
+								.col-3.no-paddings
+									+input('linkGithab','url','Введите ссылку',"",'Ссылка на GitHub')
 							.row.ml-0.mr-0.mt-30
-								.add-works__form-button-save
-									+buttonSubmit('Сохранить', 'save-button', 'save')
-								.add-works__form-button-cancel
-									+button('Отмена', '#', 'primary')
+								+buttonSubmit('Сохранить', 'save-button', 'save')(class="mr-20")
+								+button('Отмена', '#', 'primary')
 		include ../sections/footer.pug
