@@ -13,7 +13,7 @@ block content
 				.row.ml-0.mr-0
 					.col-10.offset-1.pl-0.pr-0
 						.add-works__title
-							h1.title-1.add-works__title-text Добавить работу
+							h1.title-1.add-works__title-text.no-margins Добавить работу
 						form.add-works__form.mt-40
 							.add-works__form-item.mb-30
 								+input('workName','text','Введите название работы',"",'Название')
@@ -32,5 +32,5 @@ block content
 									+input('linkGithab','url','Введите ссылку',"",'Ссылка на GitHub')
 							.row.ml-0.mr-0.mt-30
 								+buttonSubmit('Сохранить', 'save-button', 'save')(class="mr-20")
-								+button('Отмена', '#', 'primary')
+								+buttonSubmit('Отмена', 'infoButton')
 		include ../sections/footer.pug
