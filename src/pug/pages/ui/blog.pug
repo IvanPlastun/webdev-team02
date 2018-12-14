@@ -10,49 +10,42 @@ block content
 			h1 Блог
 			.section-ui
 				include ../blog.pug
-
-
 			pre.
 				include ../blog.pug	
-			
 			.title pages/blog.pug
 			pre.
 				extends ../layouts/page-layout/page.pug
 
 				block variables
-					- var title = 'Работы';
+					- var title = 'Блог';
 					- var pageClass = 'content-page';
 
 				block content
 					include ../sections/header-admin.pug
 					include ../sections/header-guest.pug
 					.container.pb-120.pt-80.pl-0.pr-0
-						.works-title.mb-35
-							.works-title-left
-								h1.works-title-text
-									span.works-title-text--bold Работы
-									|, которые сделал я и моя команда
-							.works-title-right
-								+button('Добавить работу', '#!', 'edit')
+						.blog-title.mb-40
+							h1.blog-title-text Блог веб-разработчика
+							+button('Добавить пост', '#!', 'edit')
 						.row.ml-0.mr-0.mb-50
 							.col-auto.pl-0.pr-0.mr-30
-								+cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#!')
+								+cardBlog('../img/blog/new-york.jpg', 'Поездка в New York', '#!')
 							.col-auto.pl-0.pr-0.mr-30
-								+cardPortfolio('../img/blog/works-UI-Kit.jpg', 'Верстка UI набора', '#!')
+								+cardBlog('../img/blog/valley.jpg', 'Что я делал в долине', '#!')
 							.col-auto.pr-0.pl-0
-								+cardPortfolio('../img/blog/works-shop.jpg', 'Верстка интернет магазина', '#!')
+								+cardBlog('../img/blog/summer.jpg', 'Как я ходил в поход этим летом', '#!')
 						.row.ml-0.mr-0.mb-50
 							.col-auto.pl-0.pr-0.mr-30
-								+cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#!')
+								+cardBlog('../img/blog/ui-blog-preview.jpg', 'Поездка в New York пример длинного названия поста...', '#!')
 							.col-auto.pl-0.pr-0.mr-30
-								+cardPortfolio('../img/blog/works-UI-Kit.jpg', 'Верстка UI набора', '#!')
+								+cardBlog('../img/blog/valley.jpg', 'Что я делал в долине', '#!')
 							.col-auto.pr-0.pl-0
-								+cardPortfolio('../img/blog/works-shop.jpg', 'Верстка интернет магазина', '#!')
+								+cardBlog('../img/blog/summer2.jpg', 'Как я ходил в поход этим летом', '#!')
 						.row.ml-0.mr-0
 							.col-auto.pl-0.pr-0.mr-30
-								+cardPortfolio('../img/blog/ui-portfolio-preview.jpg', 'Верстка Landing Page', '#!')
+								+cardBlog('../img/blog/new-york.jpg', 'Поездка в New York', '#!')
 							.col-auto.pl-0.pr-0.mr-30
-								+cardPortfolio('../img/blog/works-UI-Kit.jpg', 'Верстка UI набора', '#!')
+								+cardBlog('../img/blog/valley.jpg', 'Что я делал в долине', '#!')
 							.col-auto.pr-0.pl-0
-								+cardPortfolio('../img/blog/works-shop.jpg', 'Верстка интернет магазина', '#!')
+								+cardBlog('../img/blog/summer.jpg', 'Как я ходил в поход этим летом', '#!')
 					include ../sections/footer.pug

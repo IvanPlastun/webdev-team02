@@ -8,11 +8,9 @@ block content
 	include ../sections/header-admin.pug
 	include ../sections/header-guest.pug
 	.container.pb-120.pt-80.pl-0.pr-0
-		.blog-title.mb-35
-			.blog-title-left
-				h1.blog-title-text Блог веб-разработчика
-			.blog-title-right
-				+button('Добавить пост', '#!', 'edit')
+		.blog-title.mb-40
+			h1.blog-title-text Блог веб-разработчика
+			+button('Добавить пост', '#!', 'edit')
 		.row.ml-0.mr-0.mb-50
 			.col-auto.pl-0.pr-0.mr-30
 				+cardBlog('../img/blog/new-york.jpg', 'Поездка в New York', '#!')
