@@ -14,10 +14,6 @@
 	.cover;
 }
 
-.separate-work-head {
-	padding-top: 7.5em;
-}
-
 .separate-work-head__title {
 	font-weight: 700;
 	font-size: 36px;
@@ -34,6 +30,10 @@
 
 .separate-work-info__category {
 	text-decoration: none;
+	
+	&:hover, &:focus, &:active {
+		color: @blueHover;
+	}
 }
 
 .separate-work-description-wrapper {
@@ -47,6 +47,7 @@
 }
 
 .separate-work-description__text {
+	margin: 0;
 	margin-bottom: 1.25em;
 }
 
@@ -64,10 +65,27 @@
 	list-style-type: none;
 }
 
+.separate-work-technologies__list-item {
+	line-height: 1;
+	margin-bottom: 1.25em;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 .separate-work-technologies__list-item:before {
 	display: inline-block;
 	content: "•";
 	margin-right: 5px;
+}
+
+.separate-work-link-project__link,
+.separate-work-link-github__link {
+	
+	&:hover, &:focus, &:active {
+		color: @blueHover;
+	}
 }
 
 .separate-work-pagination {
