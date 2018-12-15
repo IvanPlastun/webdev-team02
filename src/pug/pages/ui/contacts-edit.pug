@@ -14,40 +14,37 @@ block content
 						include ../../sections/header-admin.pug
 						include ../../sections/header-guest.pug
 						.sticky-footer-content
-							.container.contacts-edit
+							.container.contacts-edit.pl-0.pr-0.pt-80.pb-120
 								.contacts-edit__title
-									h1.title-1.contacts-edit__title-text Редактировать данные
-								form.contacts-edit__form
+									h1.title-1.contacts-edit__title-text.pl-15.no-margins Редактировать данные
+								form.contacts-edit__form.mt-40
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('first-name','text','Введите имя','Имя')
+											+input('first-name','text','Введите имя',"",'Имя')
 										.col-md-3
-											+input('last-name','text','Введите фамилию','Фамилия')
+											+input('last-name','text','Введите фамилию',"",'Фамилия')
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('email','text','Введите email','Email')
+											+input('email','text','Введите email',"",'Email')
 										.col-md-3
-											+input('skype','text','Введите skype','Skype')
+											+input('skype','text','Введите skype',"",'Skype')
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('vkontakte','text','Введите ссылку на профиль','Вконтакте')
+											+input('vkontakte','text','Введите ссылку на профиль',"",'Вконтакте')
 										.col-md-3
-											+input('facebook','text','Введите ссылку на профиль','Facebook')
+											+input('facebook','text','Введите ссылку на профиль',"",'Facebook')
 										.col-md-3
-											+input('github','text','Введите ссылку на профиль','Github')
+											+input('github','text','Введите ссылку на профиль',"",'Github')
 										.col-md-3
-											+input('twitter','text','Введите ссылку на профиль','Twitter')
+											+input('twitter','text','Введите ссылку на профиль',"",'Twitter')
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('phone','text','Введите телефон','Телефон')
+											+input('phone','text','Введите телефон',"",'Телефон')
 										.col-md-3
-											+input('address','text','Введите адрес','Адрес')
+											+input('address','text','Введите адрес',"",'Адрес')
 									.row.ml-0.mr-0
-										.contacts-edit__form-button-save
-											+buttonSubmit('Сохранить', 'save-button', 'save')
-										.contacts-edit__form-button-cancel
-											+button('Отмена', '#', 'primary')
-
+										+buttonSubmit('Сохранить', 'save-button', 'save')(class="ml-15")(class="ml-15 mr-20")
+										+buttonSubmit('Отмена', 'infoButton')
 						include ../../sections/footer.pug
 			
 
@@ -59,43 +56,40 @@ block content
 					- var title = 'Контакты - редактировать';
 					- var pageClass = 'content-page';
 
-				lock content
+				block content
 					.sticky-footer-wrapper
 						include ../sections/header-admin.pug
 						include ../sections/header-guest.pug
 						.sticky-footer-content
-							.container.contacts-edit
+							.container.contacts-edit.pl-0.pr-0.pt-80.pb-120
 								.contacts-edit__title
-									h1.title-1.contacts-edit__title-text Редактировать данные
-								form.contacts-edit__form
+									h1.title-1.contacts-edit__title-text.pl-15.no-margins Редактировать данные
+								form.contacts-edit__form.mt-40
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('first-name','text','Введите имя','Имя')
+											+input('first-name','text','Введите имя',"",'Имя')
 										.col-md-3
-											+input('last-name','text','Введите фамилию','Фамилия')
+											+input('last-name','text','Введите фамилию',"",'Фамилия')
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('email','text','Введите email','Email')
+											+input('email','text','Введите email',"",'Email')
 										.col-md-3
-											+input('skype','text','Введите skype','Skype')
+											+input('skype','text','Введите skype',"",'Skype')
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('vkontakte','text','Введите ссылку на профиль','Вконтакте')
+											+input('vkontakte','text','Введите ссылку на профиль',"",'Вконтакте')
 										.col-md-3
-											+input('facebook','text','Введите ссылку на профиль','Facebook')
+											+input('facebook','text','Введите ссылку на профиль',"",'Facebook')
 										.col-md-3
-											+input('github','text','Введите ссылку на профиль','Github')
+											+input('github','text','Введите ссылку на профиль',"",'Github')
 										.col-md-3
-											+input('twitter','text','Введите ссылку на профиль','Twitter')
+											+input('twitter','text','Введите ссылку на профиль',"",'Twitter')
 									.row.mb-30.ml-0.mr-0
 										.col-md-3
-											+input('phone','text','Введите телефон','Телефон')
+											+input('phone','text','Введите телефон',"",'Телефон')
 										.col-md-3
-											+input('address','text','Введите адрес','Адрес')
+											+input('address','text','Введите адрес',"",'Адрес')
 									.row.ml-0.mr-0
-										.contacts-edit__form-button-save
-											+buttonSubmit('Сохранить', 'save-button', 'save')
-										.contacts-edit__form-button-cancel
-											+button('Отмена', '#', 'primary')
-
+										+buttonSubmit('Сохранить', 'save-button', 'save')(class="ml-15")(class="ml-15 mr-20")
+										+buttonSubmit('Отмена', 'infoButton')
 						include ../sections/footer.pug

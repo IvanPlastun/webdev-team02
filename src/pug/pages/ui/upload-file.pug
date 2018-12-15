@@ -9,16 +9,17 @@ block content
         .container.container--left.user-content.pt-35
         .title-1 Загрузка файла
         .section-ui
-            include ../../sections/upload-file-no-img.pug
+            +upload-file-no-img("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.")
         .title-2 Использование секции без изображения
         pre.
-            include ../../sections/upload-file-no-img.pug
-        .title-2 Код секции без изображения
+            +upload-file-no-img("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.")
+        .title-2 mixins/_upload-file-no-img.pug
         pre.
-            section.upload-file
-                h6.upload-file__title Фотография
-                p.upload-file__description Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
-                +file('Выбрать файл','Файл не выбран','upload-file','upload-file', true)
+            mixin upload-file-no-img(title, description)
+                section.upload-file
+                    h6.upload-file__title #{'#{title}'}
+                    p.upload-file__description #{'#{description}'}
+                    +file('Выбрать файл','Файл не выбран','upload-file','upload-file', false)
         .section-ui
             include ../../sections/upload-file-with-img.pug
         .title-2 Использование секции с изображением
