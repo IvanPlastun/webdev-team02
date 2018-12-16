@@ -1,7 +1,7 @@
 //- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
 
-mixin link(text,url)
-    a(href= url class="link") #{text}
+mixin link(text, url)
+    a(href=url class="link")&attributes(attributes) #{text}
 
 mixin postLink(text, link)
     a(href=link)&attributes(attributes) #{text}

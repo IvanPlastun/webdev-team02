@@ -1,0 +1,29 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+    - var title = 'Вход';
+    - var pageClass = 'login';
+
+block content
+    .login-box
+        .login-box-head
+            .login-box-head-logo
+                span.mr-20
+                    i(class='far fa-paper-plane mr-0')
+                span супер сайт
+            .login-box-head-logo-link-registration
+                +link('Регистрация', '#!')
+        .login-box-content
+            .login-box-content-input
+                h1.login-box-content-input__title.mb-40 Вход на сайт
+                form.login-box-content-input-form(action='#!')
+                    +notification('Введите email', 'error')
+                    +input('email','text','E-mail','input-email')(class='mb-10 mt-20')
+                    +input('password','password','Пароль','input-password')(class='mb-25')
+                    .login-box-content-input-form-help.mb-30
+                        +checkbox('Запомнить меня', 'checked')
+                        +link('Забыл пароль', '#!')
+                    +buttonSubmit('Войти', 'enter-button', 'enter')(class='ml-80')
+        .login-box-footer.pb-30
+            p.mb-15 © Юрий Ключевский
+            p Создано с #[i(class='fas fa-heart')] в #[a.strong(href='http://webcademy.ru' target='_blank') WebCademy.ru] в 2018 году
