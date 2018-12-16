@@ -6,43 +6,36 @@ block variables
 	
 block content
 	include ../sections/header-admin.pug
-	.header
-		include ../sections/logo.pug
-		.pt-15
-			include ../sections/navigation.pug	
-	.section-ui.section-about__info.mt-80.mb-70
+	include ../sections/header-user.pug	
+	.section-about__info.mt-80.mb-65
 		.container
 			.row
 				.col-md-3
 					+avatar('avatar.jpg', 'alt text avatar')
 				.col-md-9
-					+buttonSubmit('Редактировать', 'edit-button', 'edit').float-right
-					h1.about__info-name Емельян Казаков
-					p.about__info-text Я веб разработчик из Казани. Мне 26 лет.
-					p.about__info-text Занимаюсь разработкой современных сайтов и приложенийю Мне нравится делать интересные и современные проекты. 
-					p.about__info-text Этот сайт я сделал в рамкаобучения в школе онлайн обучения WebCademy. Чуть позже освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
-					span.about__info-skills Что я умею
-					p.about__info-text Меня привлекает Frontend разработка, это не только моя работа, но и хобби. Также знаком и могу решать несложные задачи на Backend. Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
-	.section-ui.section-indikators.pt-80.pb-30
+					+buttonSubmit('Редактировать', 'edit-button', 'edit')(class="float-right")
+					h1.mb-15.about-info__name Емельян Казаков
+					p.about-info__text Я веб разработчик из Казани. Мне 26 лет.
+					p.mb-15.about-info__text Занимаюсь разработкой современных сайтов и приложенийю Мне нравится делать интересные и современные проекты. 
+					p.about-info__text Этот сайт я сделал в рамкаобучения в школе онлайн обучения WebCademy. Чуть позже освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
+					h3.about-info__skills Что я умею
+					p.about-info__text Меня привлекает Frontend разработка, это не только моя работа, но и хобби. Также знаком и могу решать несложные задачи на Backend. Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+	.section-indikators.pt-80
 		.container
-			.row
-				.offset-md-3.col-md-3
-					span.indikators__title-text.title-1.color-width Технологии
-					span.indikators__text Которые использую в работе
-				.offset-md-4.col-md-2
+			.row.indikators-block.justify-content-between
+				.col-md-10
+					p.mb-10.indikators-title__text.title-1.color-width Технологии
+					p.mb-10.indikators-text Которые использую в работе
+				.col-md-2
 					+buttonSubmit('Редактировать', 'edit-button', 'edit')
 			.row
-				.col-md-2
-					ul.list__specification.title-1.color-width
-						li.item-specification
-							span.indikators__specification Frontend
-						li.item-specification
-							span.indikators__specification Backend
-						li.item-specification
-							span.indikators__specification Workflow
+				.col-md-2.list-specification.title-1.color-width.flex-position-text
+					span.indikators__specification Frontend
+					span.indikators__specification Backend
+					span.indikators__specification Workflow
 				.col-md-10
 					include ../sections/indicator-section.pug
-	.section-ui.sectoin-workflow.mt-60.mb-30
+	.sectoin-workflow.mt-60.mb-30
 		.container
 			.row
 				.offset-md-3.col-md-3
@@ -72,6 +65,4 @@ block content
 						.workflow-info
 							span.workflow-info__profile.title-4 Веб-разработчик, Cloud studio
 							p.workflow-info__text Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазиновю Участие в разработке CRM системы "Sky CRM". Стек используемых технологий Git, JS, Angular.
-							
-
 	include ../sections/footer.pug
