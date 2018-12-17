@@ -1,0 +1,5 @@
+mixin upload-file-no-img(title, description)
+    section.upload-file
+        h6.upload-file__title #{title}
+        p.upload-file__description #{description}
+        +file('Выбрать файл','Файл не выбран','upload-file','upload-file', false)
