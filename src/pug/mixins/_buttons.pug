@@ -40,7 +40,7 @@ mixin buttonWithIcon(text, link, icon, type, iconPos)
 	if type == "next" && icon != "" && iconPos == "right"
 		a.button(href=link, class="button-next")&attributes(attributes) #{text} #[span.button__icon #[i(class="fas " + icon)]]
 	else if type == "previous" && icon != "" && iconPos == "left"
-		a.button(href=link, class="button-previous") #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="mr-0 fas " + icon)]]
+		a.button(href=link, class="button-previous")&attributes(attributes) #{text} #[span.button__icon.button__icon--mright.float-left #[i(class="fas " + icon)]]
 	else if  type == "edit" && icon != "" && iconPos == "right"
 		a.button(href=link, class="button-edit")&attributes(attributes) #{text} #[span.button__icon #[i(class="fas " + icon)]]
 	else if  type == "edit" && icon != "" && iconPos == "left"
