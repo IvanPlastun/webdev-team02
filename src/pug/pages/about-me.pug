@@ -7,9 +7,9 @@ block variables
 block content
 	include ../sections/header-admin.pug
 	include ../sections/header-user.pug	
-	.section-about__info.mt-80.mb-65
+	.section-about-info.mt-80.mb-65
 		.container
-			.row
+			.row.about-info
 				.col-md-3
 					+avatar('avatar.jpg', 'alt text avatar')
 				.col-md-9
@@ -22,17 +22,17 @@ block content
 					p.about-info__text Меня привлекает Frontend разработка, это не только моя работа, но и хобби. Также знаком и могу решать несложные задачи на Backend. Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
 	.section-indikators.pt-80
 		.container
-			.row.indikators-block.justify-content-between
-				.col-md-10
-					p.mb-10.indikators-title__text.title-1.color-width Технологии
-					p.mb-10.indikators-text Которые использую в работе
+			.row.indikators-block
+				.offset-md-3.col-md-7
+					p.mb-10.indikators-block__title.title-1.color-width Технологии
+					p.indikators-block__text Которые использую в работе
 				.col-md-2
 					+buttonSubmit('Редактировать', 'edit-button', 'edit')
 			.row
-				.col-md-2.list-specification.title-1.color-width.flex-position-text
-					span.indikators__specification Frontend
-					span.indikators__specification Backend
-					span.indikators__specification Workflow
+				.col-md-2.list-technology.title-1.color-width
+					span.list-technology__text Frontend
+					span.list-technology__text Backend
+					span.list-technology__text Workflow
 				.col-md-10
 					include ../sections/indicator-section.pug
 	.sectoin-workflow.mt-60.mb-30
@@ -41,7 +41,7 @@ block content
 				.offset-md-3.col-md-3
 					span.workflow.title-1 Опыт работы
 				.offset-md-4.col-md-2
-					+buttonSubmit('Редактировать', 'edit-button', 'edit').mt-40
+					+buttonSubmit('Редактировать', 'edit-button', 'edit').
 			.row
 				.offset-md-3.col-md-9
 					.workflow-block
