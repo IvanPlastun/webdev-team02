@@ -12,17 +12,17 @@ block content
 			.row.m-0
 				.col-12.p-0
 					.add-post-content.col-10.offset-1.p-0
-						h1 Добавить пост
+						h1.add-post-content__title Добавить пост
 						.add-post-content__name.mt-35
-						+input('name','text','Введите имя','Поле для ввода', 'Название')
-						.add-post-content__img.mb-30
-						include ../sections/upload-file-no-img.pug
-						.add-post-content__main.mb-35
-						+textarea('Содержание поста','Введите город','','','Содержание')
-						.add-post-content__submit.mb-35
-						span.mr-30
-							+buttonSubmit('Сохранить', 'save-button', 'save')
-						span
-							+buttonSubmit('Отмена', 'infoButton')
+							+input('name','text','Введите имя','Поле для ввода', 'Название')
+						.add-post-content__img.mt-30
+							+upload-file-no-img("Изображение", "изображение и параметры 945px и больше, высота от 400px")
+						.add-post-content__main.mt-30
+							+textarea('Содержание поста','Введите город','','','Содержание')
+						.add-post-content__submit.mt-30
+							span.mr-20
+								+buttonSubmit('Сохранить', 'save-button', 'save')
+							span
+								+buttonSubmit('Отмена', 'infoButton')
 								
 		include ../sections/footer.pug
