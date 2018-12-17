@@ -1,5 +1,4 @@
-//Установка фона
-.login {
+.autorization {
     background: url(/img/img-loginPage/layout-2.png),
     url(/img/img-loginPage/layout-1.png),
     url(/img/img-loginPage/background.jpg);
@@ -9,22 +8,25 @@
     height: 100vh;
 }
 
-//Выравнивание содержимого
-.login-box {
-    padding: 45px 50px 0 50px;
+.autorization--vertical-position {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
 }
 
-//Стили для верхней части страницы
-.login-box-head {
+.flex--center {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.autorization-head {
     display: flex;
     justify-content: space-between;
+    padding: 45px 50px 0 50px;
 }
 
-.login-box-head-logo {
+.autorization-head-logo {
     font-family: @baseFont;
     color: @white;
     text-transform: capitalize;
@@ -32,7 +34,7 @@
     font-weight: 700;
 }
 
-.login-box-head-logo-link-registration a {
+.autorization-head-link a{
     font-family: @baseFont;
     color:  #fefefe;
     font-size: 16px;
@@ -44,13 +46,7 @@
     }
 }
 
-//Стили для блока с формой входа
-.login-box-content {
-    display: flex;
-    justify-content: center;
-}
-
-.login-box-content-input {
+.autorization-content {
     background-color:  rgba(18, 45, 61, 0.6);
     box-shadow: 5px 9px 40px 0px #63758a;
     border-radius: 10px;
@@ -58,7 +54,7 @@
     padding: 40px 30px
 }
 
-.login-box-content-input__title {
+.autorization-content__title {
     font-family: @baseFont;
     color: @white;
     font-size: 28px;
@@ -66,7 +62,7 @@
     text-align: center;
 }
 
-.login-box-content-input-form-help {
+.autorization-content-form-help {
     color:  #ffffff;
 
     a {
@@ -82,8 +78,11 @@
     }
 }
 
-//Стили для copyright
-.login-box-footer {
+.autorization-content-form-button {
+    text-align: center;
+}
+
+.autorization-footer {
     font-family: @baseFont;
     color: @white;
     font-size: 16px;

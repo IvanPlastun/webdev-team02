@@ -1,16 +1,16 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-    - var title = 'Вход - UI-kit и HTML фреймворк - Документация';
+    - var title = 'Регистрация - UI-kit и HTML фреймворк - Документация';
     - var pageClass = 'body--dashboard';
 
 block content
     .main-wrapper
         .container.container--left.user-content.pt-35
-        .title-1 Страница Вход
+        .title-1 Страница регистрация
         .section-ui
-            +link("Страница вход", '../login.html')(target="_blank")
-        .title-2 pages/login.pug
+            +link("Страница регистрация", '../registration.html')(target="_blank")
+        .title-2 pages/registration.pug
         pre.
             .autorization.autorization--vertical-position
                 .autorization-head
@@ -19,21 +19,22 @@ block content
                             i(class='far fa-paper-plane mr-0')
                         span супер сайт
                     .autorization-head-link
-                        +link('Регистрация', 'registration.html')
+                        +link('Вход', 'login.html')
                 .container
                     .row
                         .col-12.flex--center
                             .autorization-content
-                                h1.autorization-content__title.mb-40 Вход на сайт
+                                h1.autorization-content__title.mb-40 Регистрация
                                 form.autorization-content-form(action='#!')
-                                    +notification('Введите email', 'error')
+                                    +notification('Данный email уже занят', 'error')
+                                        p.
+                                            Используйте другой email чтобы создать новый аккаунт.
+                                        p.
+                                            Или воспользуйтесь #{"#[a(href='#!') восстановлением пароля]"}, чтобы войти на сайт.
                                     +input('email','text','E-mail','input-email')(class='mb-10 mt-20')
-                                    +input('password','password','Пароль','input-password')(class='mb-25')
-                                    .autorization-content-form-help.mb-30
-                                        +checkbox('Запомнить меня', 'checked')
-                                        +link('Забыл пароль', '#!')
+                                    +input('password','password','Пароль','input-password')(class='mb-30')
                                     .autorization-content-form-button
-                                        +buttonSubmit('Войти', 'enter-button', 'enter')
+                                        +buttonSubmit('Регистрация', 'enter-button', 'enter')
                 .container
                     .row
                         .col-12
