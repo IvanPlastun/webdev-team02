@@ -1,0 +1,78 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Блог - добавить пост';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35.pb-40
+			h1 Блог - добавить пост
+
+			.section-ui
+				include ../../sections/header-admin.pug
+				include ../../sections/header-user.pug
+				.content-exp-page
+					.container.pl-0.pr-0
+						.row.m-0
+							.col-12.p-0
+								.row.m-0
+									.add-post-content.col-10.offset-1.p-0
+										.row.m-0
+											.col-12.p-0
+												h1 Добавить пост
+										.row.m-0.mt-35
+											.add-postname.col-12.p-0
+												+input('name','text','Введите имя','Поле для ввода', 'Название')
+
+										.row.m-0.mt-30.mb-15
+											.add-img.col-12.p-0
+												p.m-0.add-img__title.pb-10 Изображение
+												p.m-0 Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+										.row.m-0
+											.col-4.p-0
+												+file('Выбрать файл', 'Файл не выбран', 'fileUpload','fileUpload',false)
+										.row.m-0.mt-30
+											.col-12.p-0
+												+textarea('Содержание поста','Введите город','','','Содержание')
+
+										.row.m-0.mt-30
+											.col-4.p-0
+												span.mr-20
+													+buttonSubmit('Сохранить', 'save-button', 'save')
+												span
+													+buttonSubmit('Отмена', 'infoButton')
+									
+
+				include ../../sections/footer.pug
+			.title pages/add-post.pug
+			pre.
+				.container.pl-0.pr-0.pt-80.pb-120
+					.row.m-0
+						.col-12.p-0
+							.row.m-0
+								.add-post-content.col-10.offset-1.p-0
+									.row.m-0
+										.col-12.p-0
+											h1 Добавить пост
+									.row.m-0.mt-35
+										.add-postname.col-12.p-0
+											+input('name','text','Введите имя','Поле для ввода', 'Название')
+
+									.row.m-0.mt-30.mb-15
+										.add-img.col-12.p-0
+											p.m-0.add-img__title.pb-10 Изображение
+											p.m-0 Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+									.row.m-0
+										.col-4.p-0
+											+file('Выбрать файл', 'Файл не выбран', 'fileUpload','fileUpload',false)
+									.row.m-0.mt-30
+										.col-12.p-0
+											+textarea('Содержание поста','Введите город','','','Содержание')
+
+									.row.m-0.mt-30
+										.col-4.p-0
+											span.mr-20
+												+buttonSubmit('Сохранить', 'save-button', 'save')
+											span
+												+buttonSubmit('Отмена', 'infoButton')
