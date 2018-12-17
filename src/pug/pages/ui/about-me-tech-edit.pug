@@ -1,0 +1,73 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Редактировать - Технологии - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Редактировать - Опыт работы
+			
+			.section-ui
+				include ../about-me-tech-edit.pug
+
+			pre.
+				include ../about-me-tech-edit.pug
+			
+			.title pages/about-me-tech-edit.pug
+			pre.
+				.content-exp-page
+					.container
+						.row
+							.col-md-9.offset-md-1
+								h1.title-1.mt-0.mb-35 Редактировать - Технологии
+								form
+									.row.mb-40
+										.col-3
+											.about-me-tech__input
+												+input('html5','text','0','HTML5')
+												p.percent %
+										.col-3
+											.about-me-tech__input
+												+input('css3','text','0','CSS3')
+												p.percent %
+										.col-3
+											.about-me-tech__input
+												+input('js','text','0','JS')
+												p.percent %
+										.col-3
+											.about-me-tech__input
+												+input('jquery','text','0','jQuery')
+												p.percent %
+									.row.mb-40
+										.col-3
+											.about-me-tech__input
+												+input('php','text','0','PHP')
+												p.percent %
+										.col-3
+											.about-me-tech__input
+												+input('mysql','text','0','MySql')
+												p.percent %
+									.row.mb-30
+										.col-3
+											.about-me-tech__input
+												+input('git','text','0','Git')
+												p.percent %
+										.col-3
+											.about-me-tech__input
+												+input('gulp','text','0','Gulp')
+												p.percent %
+										.col-3
+											.about-me-tech__input
+												+input('bower','text','0','Bower')
+												p.percent %
+										.col-3
+											.about-me-tech__input
+												+input('webpack','text','0','WebPack')
+												p.percent %
+									.row
+										.col-auto.pr-30
+											+buttonSubmit('Сохранить', 'save-button', 'save')(class="mr-20")
+										.col-auto
+											+buttonSubmit('Отмена', 'cancel-button', 'cancel')
