@@ -5,67 +5,12 @@ block variables
 	- var pageClass = 'body--dashboard';
 
 block content
-	include ../../sections/header-admin.pug
-	include ../../sections/header-user.pug
-	.section-about-info.mt-80.mb-65
-		.container
-			.row.about-info
-				.col-md-3
-					+avatar('avatar.jpg', 'alt text avatar')
-				.col-md-9
-					+buttonSubmit('Редактировать', 'edit-button', 'edit')(class="float-right")
-					h1.mb-15.about-info__name Емельян Казаков
-					p.about-info__text Я веб разработчик из Казани. Мне 26 лет.
-					p.mb-15.about-info__text Занимаюсь разработкой современных сайтов и приложенийю Мне нравится делать интересные и современные проекты. 
-					p.about-info__text Этот сайт я сделал в рамкаобучения в школе онлайн обучения WebCademy. Чуть позже освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
-					h3.about-info__skills Что я умею
-					p.about-info__text Меня привлекает Frontend разработка, это не только моя работа, но и хобби. Также знаком и могу решать несложные задачи на Backend. Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
-	.section-indikators.pt-80
-		.container
-			.row.indikators-block
-				.offset-md-3.col-md-7
-					p.mb-10.indikators-block__title.title-1.color-width Технологии
-					p.indikators-block__text.mt-0.mb-0 Которые использую в работе
-				.col-md-2
-					+buttonSubmit('Редактировать', 'edit-button', 'edit')
-			.row
-				.col-md-2.list-technology
-					span.list-technology__text Frontend
-					span.list-technology__text Backend
-					span.list-technology__text Workflow
-				.col-md-10
-					include ../../sections/indicator-section.pug
-	.sectoin-workflow.pt-80.pb-120
-		.container
-			.row
-				.offset-md-3.col-md-9.exp-work.mb-25
-					p.workflow.title-1.mt-0.mb-0 Опыт работы
-					+buttonSubmit('Редактировать', 'edit-button', 'edit')
-			.row
-				.offset-md-3.col-md-9
-					.workflow-block.mb-40
-						.workflow-block__date.mb-15
-							span февраль 2017 - по настоящее время
-						.workflow-info
-							h4.workflow-info__profile.title-4.mb-15.mt-0 Frontend разработчик, Вконтакте, mail.ru group
-							p.workflow-info__text Работы в команде Вконтакте. Работал в команде над обновлением сервиса Музыка, работа над видео разделом. Создание видеолеера. Создание кроссбраузерных компонентов.  Работа над оптимизацией скорости загрузки медиа контента.
-					.workflow-block.mb-40
-						.workflow-block__date.mb-15
-							span сентябрь 2015 - по январь 2017
-						.workflow-info
-							h4.workflow-info__profile.title-4 Разработчик интерфейсов, Яндекс
-							p.workflow-info__text Работы в проекте ЯндексМузыка. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы.
-					.workflow-block.mb-40
-						.workflow-block__date.mb-15
-							span март 2013 - по август 2015
-						.workflow-info
-							h4.workflow-info__profile.title-4 Веб-разработчик, Cloud studio
-							p.workflow-info__text Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазиновю Участие в разработке CRM системы "Sky CRM". Стек используемых технологий Git, JS, Angular.
-	include ../../sections/footer.pug
+	.section-ui
+		include ../about-me.pug
 	.title pages/about-me.pug
 			pre.
-				include ../../sections/header-admin.pug
-				include ../../sections/header-user.pug
+				include ../sections/header-admin.pug
+				include ../sections/header-user.pug
 				.section-about-info.mt-80.mb-65
 					.container
 						.row.about-info
@@ -79,7 +24,7 @@ block content
 								p.about-info__text Этот сайт я сделал в рамкаобучения в школе онлайн обучения WebCademy. Чуть позже освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
 								h3.about-info__skills Что я умею
 								p.about-info__text Меня привлекает Frontend разработка, это не только моя работа, но и хобби. Также знаком и могу решать несложные задачи на Backend. Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
-				.section-indikators.pt-80
+				.section-indikators.pt-50
 					.container
 						.row.indikators-block
 							.offset-md-3.col-md-7
@@ -93,7 +38,7 @@ block content
 								span.list-technology__text Backend
 								span.list-technology__text Workflow
 							.col-md-10
-								include ../../sections/indicator-section.pug
+								include ../sections/indicator-section.pug
 				.sectoin-workflow.pt-80.pb-120
 					.container
 						.row
@@ -112,12 +57,12 @@ block content
 									.workflow-block__date.mb-15
 										span сентябрь 2015 - по январь 2017
 									.workflow-info
-										h4.workflow-info__profile.title-4 Разработчик интерфейсов, Яндекс
+										h4.workflow-info__profile.title-4.mb-15.mt-0 Разработчик интерфейсов, Яндекс
 										p.workflow-info__text Работы в проекте ЯндексМузыка. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы.
-								.workflow-block.mb-40
+								.workflow-block
 									.workflow-block__date.mb-15
 										span март 2013 - по август 2015
 									.workflow-info
-										h4.workflow-info__profile.title-4 Веб-разработчик, Cloud studio
+										h4.workflow-info__profile.title-4.mb-15.mt-0 Веб-разработчик, Cloud studio
 										p.workflow-info__text Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазиновю Участие в разработке CRM системы "Sky CRM". Стек используемых технологий Git, JS, Angular.
-				include ../../sections/footer.pug
+				include ../sections/footer.pug
