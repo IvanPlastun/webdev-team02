@@ -25,44 +25,40 @@ block content
 			.row.indikators-block
 				.offset-md-3.col-md-7
 					p.mb-10.indikators-block__title.title-1.color-width Технологии
-					p.indikators-block__text Которые использую в работе
+					p.indikators-block__text.mt-0.mb-0 Которые использую в работе
 				.col-md-2
 					+buttonSubmit('Редактировать', 'edit-button', 'edit')
 			.row
-				.col-md-2.list-technology.title-1.color-width
+				.col-md-2.list-technology
 					span.list-technology__text Frontend
 					span.list-technology__text Backend
 					span.list-technology__text Workflow
 				.col-md-10
 					include ../sections/indicator-section.pug
-	.sectoin-workflow.mt-60.mb-30
+	.sectoin-workflow.pt-80.pb-120
 		.container
 			.row
-				.offset-md-3.col-md-3
-					span.workflow.title-1 Опыт работы
-				.offset-md-4.col-md-2
+				.offset-md-3.col-md-9.exp-work.mb-25
+					p.workflow.title-1.mt-0.mb-0 Опыт работы
 					+buttonSubmit('Редактировать', 'edit-button', 'edit').
 			.row
 				.offset-md-3.col-md-9
-					.workflow-block
-						.workflow-block__date
-							.workflow__date.mb-20 февраль 2017
-							.workflow__date по настоящее время
+					.workflow-block.mb-40
+						.workflow-block__date.mb-15
+							span февраль 2017 - по настоящее время
 						.workflow-info
-							span.workflow-info__profile.title-4 Frontend разработчик, Вконтакте, mail.ru group
+							h4.workflow-info__profile.title-4.mb-15.mt-0 Frontend разработчик, Вконтакте, mail.ru group
 							p.workflow-info__text Работы в команде Вконтакте. Работал в команде над обновлением сервиса Музыка, работа над видео разделом. Создание видеолеера. Создание кроссбраузерных компонентов.  Работа над оптимизацией скорости загрузки медиа контента.
-					.workflow-block
-						.workflow-block__date
-							.workflow__date.mb-20 сентябрь 2015
-							.workflow__date по январь 2017
+					.workflow-block.mb-40
+						.workflow-block__date.mb-15
+							span сентябрь 2015 - по январь 2017
 						.workflow-info
-							span.workflow-info__profile.title-4 Разработчик интерфейсов, Яндекс
+							h4.workflow-info__profile.title-4 Разработчик интерфейсов, Яндекс
 							p.workflow-info__text Работы в проекте ЯндексМузыка. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы.
-					.workflow-block
-						.workflow-block__date
-							.workflow__date.mb-20 март 2013
-							.workflow__date по август 2015
+					.workflow-block.mb-40
+						.workflow-block__date.mb-15
+							span март 2013 - по август 2015
 						.workflow-info
-							span.workflow-info__profile.title-4 Веб-разработчик, Cloud studio
+							h4.workflow-info__profile.title-4 Веб-разработчик, Cloud studio
 							p.workflow-info__text Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазиновю Участие в разработке CRM системы "Sky CRM". Стек используемых технологий Git, JS, Angular.
 	include ../sections/footer.pug
