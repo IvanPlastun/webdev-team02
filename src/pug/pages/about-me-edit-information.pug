@@ -20,9 +20,7 @@ block content
 							+input('name','text','Введите имя и фамилию', '', 'Имя, фамилия')
 							
 						.upload-photo.mt-30.mb-35
-							.upload-photo__title Фотография
-							.upload-photo__description Изображение jpg или png, рекомендуемый размер 205px на 205px, вес до 2Мб.
-							+file('Выбрать файл', 'Файл не выбран', 'fileUpload','fileUpload',false)
+							+upload-file-no-img("Фотография", "Изображение jpg или png, рекомендуемый размер 205x205 пикселей, и весом до 2Мб.")
 							.upload-photo__result
 								img(src="img/avatars/avatar.jpg" alt="user-photo")
 						
