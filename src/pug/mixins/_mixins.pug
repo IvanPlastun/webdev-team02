@@ -7,7 +7,9 @@ mixin postLink(text, link)
     a(href=link)&attributes(attributes) #{text}
 
 mixin blogImg(img,alt)
-    img(src="../../img/blog/post-img.jpg", altText = alt || '', alt=alt)
+    - altText = alt || ''
+    img(src="../../img/blog/" + img, alt=altText)
 
 mixin workImg(img,alt)
-    img(src="../../img/works/separate-work.jpg", altText = alt || '', alt=alt)
+    - altText = alt || ''
+    img(src="../../img/works/" + img, alt=altText)
