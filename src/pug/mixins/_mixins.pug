@@ -8,10 +8,6 @@ mixin postLink(text,link)
 mixin horisontal-line()
 	.line
 
-mixin workImg(img,alt)
+mixin Img(img,alt)
 	- altText = alt || ''
-	img(src="../../img/blog/" + img, alt=altText)
-
-mixin workImg(img,alt)
-	- altText = alt || ''
-	img(src="../../img/works/" + img, alt=altText)
+	img(src="../../img/" + img, alt=altText)
