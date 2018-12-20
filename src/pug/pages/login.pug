@@ -20,8 +20,8 @@ block content
                         h1.autorization-content__title.mb-40 Вход на сайт
                         form.autorization-content-form(action='#!')
                             +notification('Введите email', 'error')
-                            +input('email','text','E-mail','input-email')(class='mb-10 mt-20')
-                            +input('password','password','Пароль','input-password')(class='mb-25')
+                            +input('email','email','E-mail')(id="input-email" class='mb-10 mt-20')
+                            +input('password','password','Пароль')(id='input-password' class='mb-25')
                             .autorization-content-form-help.mb-30
                                 +checkbox('Запомнить меня', 'checked')
                                 +link('Забыл пароль', '#!')

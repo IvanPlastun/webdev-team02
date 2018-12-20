@@ -13,13 +13,20 @@ block content
         .title-2 Использование секции без изображения
         pre.
             +upload-file-no-img("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.")
+        .section-ui
+            +upload-file-no-img("Прикрепить файл", "jpg, png, pdf, doc, весом до 2Мб.", true)
+        pre.
+            +upload-file-no-img("Фотография", "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.", true)
         .title-2 mixins/_upload-file-no-img.pug
         pre.
-            mixin upload-file-no-img(title, description)
+            mixin upload-file-no-img(title, description, round)
                 section.upload-file
                     h6.upload-file__title #{'#{title}'}
                     p.upload-file__description #{'#{description}'}
-                    +file('Выбрать файл','Файл не выбран','upload-file','upload-file', false)
+                    if round
+                        +file('Выбрать файл','Файл не выбран','upload-file','upload-file', false)(class="input-file-mark--rounded")
+                    else 
+                        +file('Выбрать файл','Файл не выбран','upload-file','upload-file', false)
         .section-ui
             include ../../sections/upload-file-with-img.pug
         .title-2 Использование секции с изображением

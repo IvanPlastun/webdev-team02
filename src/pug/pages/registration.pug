@@ -24,8 +24,8 @@ block content
                                     Используйте другой email чтобы создать новый аккаунт.
                                 p.
                                     Или воспользуйтесь #[a(href="#!") восстановлением пароля], чтобы войти на сайт.
-                            +input('email','text','E-mail','input-email')(class='mb-10 mt-20')
-                            +input('password','password','Пароль','input-password')(class='mb-30')
+                            +input('email','email','E-mail')(id='input-reg-email' class='mb-10 mt-20')
+                            +input('password','password','Пароль')(id='input-reg-password' class='mb-30')
                             .autorization-content-form-button
                                 +buttonSubmit('Регистрация', 'enter-button', 'enter')
         .container
