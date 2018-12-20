@@ -12,16 +12,15 @@ block content
 			.row.m-0
 				.col-10.offset-1.p-0
 					.add-post-content
-						h1.add-post-content__title Добавить пост
-						form
+						h1.title-general.mt-0.mb-0 Добавить пост
+						form(action="#!")
 							.add-post-content__name.mt-40
-								+input('name','text','Введите имя','Поле для ввода', 'Название')
+								+input('post-name','text','Введите имя','Поле для ввода','add-post-name')
 							.add-post-content__img.mt-30
-								+upload-file-no-img("Изображение", "изображение и параметры 945px и больше, высота от 400px")
+								+upload-file-no-img('Изображение', 'изображение и параметры 945px и больше, высота от 400px')
 							.add-post-content__main.mt-30
-								+textarea('Содержание поста','Введите город','','','Содержание')
+								+textarea('post-city','Введите город','Содержание','add-post-city')
 							.add-post-content__submit.mt-30
 								+buttonSubmit('Сохранить', 'save-button', 'save')(class="mr-20")
 								+buttonSubmit('Отмена', 'infoButton')
-								
 		include ../sections/footer.pug

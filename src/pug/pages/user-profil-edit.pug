@@ -10,21 +10,21 @@ block content
 		.row
 			.col-10.offset-1
 				h1.user-edit-title Редактировать профиль
-				form.mt-35
+				form(action="#!").mt-35
 					.user-edit-wrapper
 						.user-edit-name
-							+input('name','text','Введите имя','userEditName','Имя')
+							+input('profile-edit-name','text','Введите имя','Имя','userEditName')
 						.user-edit-lastname.mt-30
-							+input('name','text','Введите фамилию','userEditLastname','Фамилия')
+							+input('profile-edit-last-name','text','Введите фамилию','Фамилия','userEditLastname')
 						.user-edit-email.mt-30
-							+input('name','email','Введите email','userEditEmail','Email')
+							+input('profile-edit-email','email','Введите email','Email','userEditEmail')
 					.user-edit-foto.mt-30
 						+upload-file-no-img("Фотография", "Изображение jpg или png, рекомендуемый размер 100x100 пикселей, и весом до 2Мб.")
 					.user-edit-wrapper.mt-30
 						.user-edit-land
-							+input('name','text','Введите страну','userEditLand','Страна')
+							+input('profile-edit-country','text','Введите страну','Страна','userEditLand')
 						.user-edit-city.mt-30
-							+input('name','text','Введите город','userEditCity','Город')
+							+input('profile-edit-city','text','Введите город','Город','userEditCity')
 						.user-edit-buttons.mt-30
 							+buttonSubmit('Сохранить', 'save-button', 'save')
 							+buttonSubmit('Отмена', 'infoButton')
