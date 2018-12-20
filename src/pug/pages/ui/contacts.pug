@@ -1,16 +1,16 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
-    - var pageClass = 'content-page';
+    - var title = 'Контакты - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
 
 block content
     .main-wrapper
         .container.container--left.user-content.pt-35
-        h1.title-1 Контакты
+        .title-1 Контакты
         .section-ui
-            include ../contacts.pug
-        h2.title-2 pages/contacts.pug
+            +link("Контакты", '../contacts.html')(target="_blank")
+        .title-2 pages/contacts.pug
         pre.
             include ../sections/header-admin.pug
             include ../sections/header-user.pug
@@ -23,7 +23,7 @@ block content
                         h1.title-general.mb-30 Контакты
                         .row.justify-content-between
                             .col-auto
-                                .contacts-category.mb-60
+                                .contacts-category.mb-55
                                     p Email
                                     p Skype
                                     p Социальные сети
@@ -31,13 +31,13 @@ block content
                                     p Телефон
                                     p Адрес
                             .col-auto
-                                .link-box
+                                .link-box.mb-15
                                     .link-box-info.mb-20
                                         p
                                             +link('webdev-ninja@mail.ru', '#!')
                                         p
                                             +link('webdev-ninja', '#!')
-                                    .link-box-info.mb-20
+                                    .link-box-info
                                         p
                                             +link('Профиль Вконтакте', '#!')(class="link--bold")
                                         p
