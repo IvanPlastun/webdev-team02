@@ -2,22 +2,21 @@
 	color: @white;
 	font-weight: 700
 }
-
+.about-info p {
+	line-height: 1.5;
+	margin: 0;
+	margin-bottom: 15px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
 .about-info__name {
 	color: @blue;
 	font-weight: 700;
 	font-size: 28px;
-}
-.about-info__text {
-	line-height: 1.5;
-	font-family: @baseFont;
 	margin: 0;
 }
-.about-info__skills {
-	font-weight: 700;
-	font-size: 24px;
-	margin: 30px 0px 15px 0px;
-}
+
 .section-indikators {
 	background: #222;
 }
@@ -43,24 +42,20 @@
 	font-size: 24px;
 	font-weight: 700;
 }
-.exp-work {
+
+.experience-work {
 	display: flex; 
 	justify-content: space-between; 
 	align-items: flex-start;
 }
-.workflow {
-	display: block;
-	font-weight: 700;
-}
+
 .workflow-block__date {
 	font-family: 'Open Sans', sans-serif;
 	color: rgba(0, 0, 0, 0.502);
 	line-height: 1;
 }
-.workflow-info__text {
-	font-family: @baseFont; 
-	font-size: 16px; 
-	font-weight: 400; 
-	line-height: 1.5; 
-	margin: 0;
+
+.workflow-info p {
+	line-height: 1.5;
+    margin: 0;
 }

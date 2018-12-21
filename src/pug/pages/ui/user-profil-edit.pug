@@ -23,7 +23,7 @@ block content
 					.container.pb-120.pt-80.pl-0.pr-0
 						.row
 							.col-10.offset-1
-								h1.user-edit-title Редактировать профиль
+								h1.title-general.mt-0.mb-0 Редактировать профиль
 								form(action="#!").mt-35
 									.user-edit-wrapper
 										.user-edit-name
@@ -40,6 +40,6 @@ block content
 										.user-edit-city.mt-30
 											+input('profile-edit-city','text','Введите город','Город','userEditCity')
 										.user-edit-buttons.mt-30
-											+buttonSubmit('Сохранить', 'save-button', 'save')
-											+buttonSubmit('Отмена', 'infoButton')
+											+buttonSubmit('Сохранить', 'save-button-profile-edit', 'save')
+											+buttonSubmit('Отмена', 'cancel-profile-edit')
 					include ../sections/footer.pug

@@ -12,3 +12,19 @@
 .badge--color {
     background-color: rgb(255,186,0);
 }
+
+.badge-link--effects {
+    .transition;
+    text-decoration: none;
+    &:hover {
+        background-color: @blueHover;
+    }
+
+    &:active {
+        background-color: @blueActive;
+    }
+
+    &:focus {
+        background-color: @blueActive;
+    }
+}

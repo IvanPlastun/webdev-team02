@@ -49,17 +49,22 @@
     right: 0;
 }
 
-p.post-content__text{
+.post-content {
     color: @textContent;
     font-size: 16px;
     margin: 0;
-    margin-bottom: 10px;
     line-height: 2em;
-    &:last-child{
-            margin-bottom: 0px;
-    }
-        
 }
+
+.post-content p {
+    margin: 0;
+    margin-bottom: 10px;
+
+    &:last-child{
+        margin-bottom: 0px;
+    }
+}
+
 
 .post-buttons-nav{
     display: flex;

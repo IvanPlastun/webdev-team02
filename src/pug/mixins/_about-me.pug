@@ -1,9 +1,9 @@
 mixin previousJob(date, title)
 	.message-user.mb-20
-		+button('Удалить', '#', 'delete').float-right
+		+button('Удалить', '#!', 'smallDelete', 'smallDelete')(class="float-right")
 		.message-user__date.mb-20 #{date}
 		.message-user-info
-			span.message-user-info__name.strong #{title}
+			h4.title-4.mt-0.mb-0 #{title}
 		if block
 			block
 		else
