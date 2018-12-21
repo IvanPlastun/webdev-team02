@@ -12,11 +12,11 @@ block content
                 .row
                     .col-10.offset-1
                         .user-profile-block
-                            h1.user-profile-title Профиль
+                            h1.title-general.mt-0.mb-0 Профиль
                             .user-profile__button
-                                +button('Редактировать', '#', 'edit')
+                                +button('Редактировать', 'user-profil-edit.html', 'edit')
                                 
-                        .user-profile-information.mb-40.mt-40
+                        .user-profile-information.mb-35.mt-40
                             .user-profile__avatar
                                 +avatar('avatar.jpg', 'alt text avatar')
                             .user-profile__description
@@ -24,7 +24,7 @@ block content
                                 +profileDescription ('Email', 'pilat@mail.ru')
                                 +profileDescription ('Страна, Город', 'Россия, Казань')
                                 
-                        h2.user-profile-text.mb-25 Комментарии пользователя
+                        h2.title-2.title-2--color.mt-0.mb-25 Комментарии пользователя
                         
                         .user-profile-comments
                             +profileComment('Поездка в LA', '05 Мая 2017 года в 15:45')

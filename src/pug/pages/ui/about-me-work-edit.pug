@@ -18,7 +18,7 @@ block content
 					.container
 						.row.justify-content-center
 							.col-md-10
-								h1.title-1.mt-0.mb-35 Редактировать - Опыт работы
+								h1.title-general.mt-0.mb-35 Редактировать - Опыт работы
 								+previousJob(
 									'Февраль 2017 - по настоящее время',
 									'Frontend разработчик, Вконтактe, mail.ru group'
@@ -44,11 +44,11 @@ block content
 			pre.
 				mixin previousJob(date, title)
 					.message-user.mb-20
-						+button('Удалить', '#', 'delete').float-right
-						.message-user__date.mb-20 \#{date}
+						+button('Удалить', '#!', 'smallDelete', 'smallDelete')(class="float-right")
+						.message-user__date.mb-20 #{'#{date}'}
 						.message-user-info
-							span.message-user-info__name.strong \#{title}
+							h4.title-4.mt-0.mb-0 #{'#{title}'}
 						if block
 							block
 						else
-							p.message-user__text Отсутствует описание должностных обязанностей
+							p.about-me-job__text Отсутствует описание должностных обязанностей

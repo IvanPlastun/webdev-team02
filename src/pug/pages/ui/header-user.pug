@@ -15,10 +15,26 @@ block content
 				include ../../sections/header-user.pug
 			.title sections/header-user.pug
 			pre.
-				.header
-				.row.header__wrapper
-					include ./logo.pug
-					.user-block
-						+header-user-block()
-				.row
-					include ./navigation.pug
+				header.header
+					.row.header__wrapper.header__wrapper--user
+						include ./logo.pug
+						.user-block
+							+header-user-block('Пользователь', 'Иван', 'Пластун')
+					.row
+						include ./navigation.pug
+			.title-2 mixins/_header-user-block.pug
+			.section-ui.dark-bg.pl-50
+				+header-user-block('Пользователь', 'Иван', 'Пластун')
+			pre.
+				+header-user-block('Пользователь', 'Иван', 'Пластун')
+			pre.
+				mixin header-user-block(group, firstName, lastName)
+					.user-block__wrapper
+						.row.user-group
+							+avatar('avatar.jpg', 'alt text avatar', 'small')
+							.user-name
+								span #{'#{firstName}'} #{'#{lastName}'}
+								p #{'#{group}'}
+								.row.user-buttons
+									+button('Профиль', '#', 'profile')
+									+button('Выход', '#', 'profile')
