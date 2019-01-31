@@ -12,7 +12,39 @@ block content
             .col-12.clearfix.mb-30
                 +button('Сообщения', 'contacts-messages.html', 'primary')(class="float-right")
                 +button('Редактировать', 'contacts-edit.html', 'edit')(class="float-right mr-20")
-            .col-5 
+            .col-5
+                h1.title-general.mb-30 Контакты
+                .row.mb-15
+                    .col-6.contacts-category
+                        p Email
+                    .col-6.link-box-info
+                        p
+                            +link('webdev-ninja@mail.ru', '#!')
+                .row.mb-15
+                    .col-6.contacts-category
+                        p Skype
+                    .col-6.link-box-info
+                        p
+                            +link('webdev-ninja', '#!')
+                .row.mb-15
+                    .col-6.contacts-category
+                        p Социальные сети
+                    .col-6.link-box-info
+                        p
+                            +link('Профиль Вконтакте', '#!')(class="link--bold")
+                        p
+                            +link('Профиль Facebook', '#!')(class="link--bold")
+                .row.mb-15
+                    .col-6.contacts-category
+                        p Телефон
+                    .col-6.info
+                        p +595-456-123
+                .row.mb-15
+                    .col-6.contacts-category
+                        p Адрес
+                    .col-6.info
+                        p Россия, Московская обл. #[br] г. Зеленоград
+            //.col-5 
                 h1.title-general.mb-30 Контакты
                 .row.justify-content-between
                     .col-auto
